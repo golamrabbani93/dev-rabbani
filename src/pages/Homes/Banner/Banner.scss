@@ -1,0 +1,144 @@
+//*banner Style Start
+@import '../../../sass/_variables';
+@import '../../../sass/_responsive';
+@import '../../../sass/_animations';
+@import '../../../sass/_button';
+.banner {
+	height: 70rem;
+	width: 100%;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: $font-bebas;
+	overflow: hidden;
+
+	&__banner-text {
+		position: absolute;
+		top: 45%;
+		left: 0%;
+		display: block;
+		@include mobile-m {
+			/*320px-480px*/
+			left: 2%;
+		}
+		@include mobile-s {
+			/*376px-480px*/
+			left: 4%;
+		}
+		.heading-primary {
+			color: $color-white;
+			text-align: center;
+			&--sub {
+				display: block;
+				font-size: 5rem;
+				font-weight: 400;
+				letter-spacing: 1.6rem;
+				animation: moveInRight 0.7s ease-out;
+			}
+			&--main {
+				display: block;
+				font-size: 20rem;
+				font-weight: 700;
+				letter-spacing: 3.5rem;
+				animation: moveInLeft 0.7s ease-out;
+				margin-bottom: -1.8rem;
+				@include mobile-m {
+					/*320px-375px*/
+					font-size: 15rem;
+				}
+				@include mobile-s {
+					/*376px-480px*/
+					font-size: 17rem;
+				}
+			}
+		}
+	}
+	&__hover {
+		position: relative;
+		.img {
+			width: 10rem;
+			height: 10rem;
+			position: absolute;
+		}
+		.devimage {
+			width: 31rem;
+			height: 35rem;
+			top: -5rem;
+			left: 36%;
+			@include mobile-m {
+				/*320px-375px*/
+				width: 28rem;
+				height: 29rem;
+				top: 2rem;
+				left: 31%;
+			}
+			@include mobile-s {
+				/*376px-480px*/
+				left: 36%;
+				width: 26rem;
+				height: 32rem;
+				top: -1rem;
+			}
+			@include mobile-l {
+				/*426px-480px*/
+				left: 32%;
+			}
+			@include desktop {
+				/*(min-width: 1401px)*/
+				left: 38%;
+			}
+		}
+		.react {
+			position: absolute;
+			width: 200px;
+			top: 16rem;
+			left: 16%;
+			animation: react 5s infinite cubic-bezier(1, 1, 0, -0.01);
+			@include mobile-m {
+				/*320px-375px*/
+				width: 120px;
+				top: -1rem;
+				left: 33%;
+			}
+			@include mobile-s {
+				/*376px-480px*/
+				width: 120px;
+				top: -1rem;
+				left: 33%;
+			}
+		}
+		.dot {
+			top: 36rem;
+			left: 13rem;
+			width: 4rem;
+			height: 4rem;
+			animation: dot 20s infinite cubic-bezier(1, 1, 0, -0.01);
+			// animation-delay: s;
+			@include mobile-m {
+				/*320px-375px*/
+				top: 13rem;
+				left: 18rem;
+				width: 4rem;
+				height: 4rem;
+			}
+			@include mobile-s {
+				/*376px-425px*/
+				top: 13rem;
+				left: 25rem;
+				width: 4rem;
+				height: 4rem;
+			}
+			@include mobile-l {
+				/*426px-480px*/
+				top: 13rem;
+				left: 27rem;
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+}
+.back_banner {
+	height: 54rem;
+}
