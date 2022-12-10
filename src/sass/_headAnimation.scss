@@ -1,0 +1,59 @@
+.head-animation {
+	width: 37rem;
+	height: 14rem;
+	position: absolute;
+	top: -21%;
+	left: 38rem;
+	@include mobile-m {
+		/*320px-375px*/
+		width: 24rem;
+		height: 14rem;
+		position: absolute;
+		top: 5%;
+		left: 21rem;
+	}
+}
+.post-heading {
+	position: relative;
+	padding-top: 12rem;
+}
+.post-heading::before {
+	content: "";
+	width: 12px;
+	height: 5px;
+	background: $color-primary;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	margin-left: -35px;
+	transform: translateX(-50%);
+	border-radius: 2px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	z-index: 1;
+}
+.head-animation:hover .post-heading::before {
+	width: 65px;
+	margin-left: -5px;
+	background: $color-primary;
+}
+.post-heading::after {
+	content: "";
+	width: 65px;
+	height: 5px;
+	background: $color-primary;
+	position: absolute;
+	bottom: -4px;
+	right: 0;
+	left: 50%;
+	margin-left: -20px;
+	border-radius: 2px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	z-index: 0;
+}
+.head-animation:hover .post-heading::after {
+	width: 12px;
+	margin-left: 35px;
+	background: $color-primary;
+}
