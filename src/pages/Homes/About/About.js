@@ -4,27 +4,25 @@ import myPhoto from '../../../images/me.png';
 import './About.scss';
 const About = () => {
 	return (
-		<section class="about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-12 about__text">
-						<p class="services__top--sub">about</p>
-						<h3 class="services__top--main">ABOUT I Love Creating Websites</h3>
-						<div class="head-animation">
-							<div class="post-heading"></div>
+		<section className="about">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-6 col-sm-12 about__text">
+						<p className="services__top--sub">about</p>
+						<h3 className="services__top--main">ABOUT I Love Creating Websites</h3>
+						<div className="head-animation">
+							<div className="post-heading"></div>
 						</div>
-						<p class="about__text--description">
-							I am a web developer. I have created many websites in 4 years. As a web developer, I
-							would say that when designing and developing website, we are very careful so that the
-							website can rank well in Google. We also consider the ownership of all types of
-							websites when creating a website. My programming languages HTML5, PHP, JavaScript,
-							CSS3. I am also experience on WordPress.
+						<p className="about__text--description">
+							Discreet web developer with over One year of front-end. Experience and a passion for
+							responsive website design. Exceptional evaluation, analysis, design, and
+							Implementation of client/server. Extremely dedicated, organised, and team-oriented.
 						</p>
-						<Link class="custom_button m-auto">discover more</Link>
+						<Link className="custom_button m-auto">discover more</Link>
 					</div>
-					<div class="col-md-6 col-sm-12">
-						<div class="about__image">
-							<img src={myPhoto} alt="" class="img-fluid" />
+					<div className="col-md-6 col-sm-12">
+						<div className="about__image">
+							<img src={myPhoto} alt="" className="img-fluid" />
 						</div>
 					</div>
 				</div>
