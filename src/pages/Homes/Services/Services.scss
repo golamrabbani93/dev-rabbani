@@ -1,0 +1,220 @@
+@import '../../../sass/_variables';
+@import '../../../sass/_responsive';
+@import '../../../sass/_typography';
+
+.services {
+	padding-top: 5rem;
+	display: block;
+	// height: 90rem;
+	transition: 2s;
+	background-position: 100% 100%;
+	background-size: cover;
+	@include mobile-m {
+		/*320px-375px*/
+		height: auto;
+	}
+	@include mobile-s {
+		/*375px-424px*/
+		height: auto;
+	}
+	@include mobile-l {
+		/*425px-480px*/
+		height: auto;
+	}
+	@include mobile-port {
+		/*481px-767px*/
+		height: auto;
+	}
+
+	&:hover {
+		background-color: #faf3f3;
+	}
+	&__top {
+		position: relative;
+		&--sub {
+			font-size: 2.3rem;
+			font-family: $font-bebas;
+			color: $color-primary;
+			@include mobile-m {
+				/*320px-375px*/
+				font-size: 3.3rem;
+			}
+			@include mobile-s {
+				/*375px-424px*/
+				font-size: 3.3rem;
+			}
+			@include mobile-l {
+				/*425px-480px*/
+				font-size: 3.5rem;
+			}
+		}
+		&--main {
+			font-size: 4rem;
+			font-family: $font-bebas;
+			@include mobile-m {
+				/*320px-375px*/
+				font-size: 5rem;
+			}
+			@include mobile-s {
+				/*375px-424px*/
+				font-size: 5rem;
+			}
+			@include mobile-l {
+				/*425px-480px*/
+				font-size: 6rem;
+			}
+		}
+		.head-animation {
+			@include mobile-s {
+				/*375px-424px*/
+				left: 20rem;
+				top: 0.6rem;
+			}
+			@include mobile-l {
+				/*425px-480px*/
+				top: 20%;
+				left: 25rem;
+			}
+			@include mobile-port {
+				/*481px-767px*/
+				left: 15rem;
+			}
+			@include tablet {
+				/*768px-1024px*/
+				left: 31%;
+			}
+		}
+	}
+	&__item {
+		background-color: $color-white;
+		transition: all 0.3s ease;
+		margin-bottom: 3rem;
+		@include mobile-m {
+			/*320px-375px*/
+			margin: 3rem;
+		}
+		@include mobile-s {
+			/*320px-375px*/
+			margin: 3rem;
+		}
+		@include mobile-l {
+			/*425px-480px*/
+			margin: 3rem;
+		}
+		@include mobile-port {
+			/*481px-767px*/
+			margin: 3rem;
+		}
+		&:hover {
+			background-color: $color-primary;
+			color: $color-white;
+		}
+		&:hover .item .hover-image {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+			transition: all 0.3s ease;
+		}
+		&:hover {
+			.main-image {
+				transform: scale(0);
+				transition: all 0.3s ease;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		.item {
+			padding: 5rem 4rem 6rem 4rem;
+			text-align: left;
+
+			&__images {
+				position: relative;
+				.main-image {
+					transition: all 0.3s ease;
+					width: 7rem;
+					@include mobile-m {
+						/*320px-375px*/
+						width: 12rem;
+					}
+					@include mobile-s {
+						/*320px-375px*/
+						width: 12rem;
+					}
+					@include mobile-l {
+						/*425px-480px*/
+						width: 12rem;
+					}
+				}
+				.hover-image {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					visibility: hidden;
+					transform: scale(0);
+					transition: all 0.3s ease;
+					width: 7rem;
+					@include mobile-m {
+						/*320px-375px*/
+						width: 12rem;
+					}
+					@include mobile-s {
+						/*320px-375px*/
+						width: 12rem;
+					}
+					@include mobile-l {
+						/*425px-480px*/
+						width: 12rem;
+					}
+				}
+			}
+			&__text {
+				padding-top: 3rem;
+				&--title {
+					margin-bottom: 2rem;
+					font-size: 3rem;
+					font-family: $font-bebas;
+					letter-spacing: 0.5rem;
+					@include mobile-m {
+						/*376px-425px*/
+						font-size: 5rem;
+					}
+					@include mobile-s {
+						/*376px-425px*/
+						font-size: 5rem;
+					}
+					@include mobile-l {
+						/*425px-480px*/
+						font-size: 5rem;
+					}
+				}
+				&--sub {
+					font-size: 1.5rem;
+					font-family: $font-sora;
+					font-weight: 300;
+					text-align: justify;
+					@include mobile-m {
+						/*376px-425px*/
+						font-size: 3.5rem;
+					}
+					@include mobile-s {
+						/*376px-425px*/
+						font-size: 3.5rem;
+					}
+					@include mobile-l {
+						/*425px-480px*/
+						font-size: 3.5rem;
+					}
+				}
+			}
+		}
+	}
+	.button {
+		margin: 7rem;
+		@include mobile-port {
+			/*481px-767px*/
+			margin-top: 5rem;
+		}
+	}
+}
