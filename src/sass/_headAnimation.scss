@@ -1,24 +1,13 @@
 .head-animation {
-	width: 37rem;
-	height: 14rem;
-	position: absolute;
-	top: -21%;
-	left: 38rem;
-	@include mobile-m {
-		/*320px-375px*/
-		width: 24rem;
-		height: 14rem;
-		position: absolute;
-		top: 5%;
-		left: 21rem;
-	}
+	position: relative;
 }
 .post-heading {
-	position: relative;
-	padding-top: 12rem;
+	position: absolute;
+	top: 0%;
+	left: 50%;
 }
 .post-heading::before {
-	content: "";
+	content: '';
 	width: 12px;
 	height: 5px;
 	background: $color-primary;
@@ -38,7 +27,7 @@
 	background: $color-primary;
 }
 .post-heading::after {
-	content: "";
+	content: '';
 	width: 65px;
 	height: 5px;
 	background: $color-primary;

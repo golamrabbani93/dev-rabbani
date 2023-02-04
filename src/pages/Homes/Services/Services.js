@@ -3,11 +3,12 @@ import {useQuery} from '@tanstack/react-query';
 import './Services.scss';
 import SingleServices from './SingleServices';
 import Bg from '../../../images/banner/banner-service.png';
+import {Link} from 'react-router-dom';
 const Services = () => {
 	const {data: services = []} = useQuery({
 		queryKey: ['services'],
 		queryFn: async () => {
-			const res = await fetch('http://localhost:5000/services');
+			const res = await fetch('https://server.webrabbani.com/services');
 			const data = await res.json();
 			return data;
 		},
@@ -28,14 +29,13 @@ const Services = () => {
 						</div>
 					</div>
 				</div>
+
 				<div className="row pad-top">
 					{services.map((service) => (
 						<SingleServices key={service._id} service={service}></SingleServices>
 					))}
 					<div className="button text-center pt-5">
-						<a href="#" className="btn custom_button m-auto">
-							View All Services
-						</a>
+						<Link className="custom_button m-auto">View All Services</Link>
 					</div>
 				</div>
 			</div>

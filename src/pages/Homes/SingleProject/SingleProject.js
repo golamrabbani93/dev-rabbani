@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom';
 import './SingleProject.scss';
 const SingleProject = () => {
 	const id = useParams();
-	console.log('🚀🚀: SingleProject -> id', id);
 	const {data: project = [], isLoading} = useQuery({
 		queryKey: [id.id],
 		queryFn: async () => {
