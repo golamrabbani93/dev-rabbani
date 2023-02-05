@@ -68,16 +68,16 @@
 			// height: 14rem;
 			position: absolute;
 			top: 8%;
-			left: 8.5%;
-			@include mobile-m {
-				/*320px-375px*/
-				left: 13%;
-			}
-			@include mobile-s {
-				/*375px-424px*/
-				top: 1rem;
-				left: -4.5rem;
-			}
+			left: 7.5%;
+			// @include mobile-m {
+			// 	/*320px-375px*/
+			// 	left: 13%;
+			// }
+			// @include mobile-s {
+			// 	/*375px-424px*/
+			// 	top: 1rem;
+			// 	left: -4.5rem;
+			// }
 			// @include mobile-l {
 			// 	/*425px-480px*/
 			// 	top: 3rem;
@@ -93,7 +93,7 @@
 			// }
 		}
 		&--description {
-			padding: 5rem 7rem 5rem 0;
+			padding: 4rem 7rem 5rem 0;
 			font-size: 1.8rem;
 			text-align: justify;
 			font-family: $font-sora;

@@ -11,27 +11,27 @@
 	&__text {
 		position: relative;
 	}
-	.head-animation {
-		@include mobile-s {
-			/*375px-424px*/
-			top: 15%;
-			left: 21rem;
-		}
-		@include mobile-l {
-			/*425px-480px*/
-			top: 32%;
-			left: 26rem;
-		}
-		@include mobile-port {
-			/*481px-767px*/
-			left: 15rem;
-		}
-		@include tablet {
-			/*768px-1024px*/
-			top: -14%;
-			left: 32%;
-		}
-	}
+	// .head-animation {
+	// 	@include mobile-s {
+	// 		/*375px-424px*/
+	// 		top: 15%;
+	// 		left: 21rem;
+	// 	}
+	// 	@include mobile-l {
+	// 		/*425px-480px*/
+	// 		top: 32%;
+	// 		left: 26rem;
+	// 	}
+	// 	@include mobile-port {
+	// 		/*481px-767px*/
+	// 		left: 15rem;
+	// 	}
+	// 	@include tablet {
+	// 		/*768px-1024px*/
+	// 		top: -14%;
+	// 		left: 32%;
+	// 	}
+	// }
 	&__items {
 		padding-top: 7rem;
 		@include mobile-m {
