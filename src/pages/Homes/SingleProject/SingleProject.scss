@@ -18,5 +18,8 @@
 	}
 	.slide-img {
 		width: 300px !important;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
