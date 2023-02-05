@@ -16,4 +16,10 @@
 		margin-bottom: -1.8rem;
 		text-align: center;
 	}
+	.slide-img {
+		width: 300px !important;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }

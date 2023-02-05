@@ -67,33 +67,34 @@
 			// width: 37rem;
 			// height: 14rem;
 			position: absolute;
-			top: 8%;
-			left: 8.5%;
+			top: 0;
+			left: -13.5rem;
 			@include mobile-m {
 				/*320px-375px*/
-				left: 13%;
+				top: 6px;
+				left: -12%;
 			}
 			@include mobile-s {
 				/*375px-424px*/
 				top: 1rem;
 				left: -4.5rem;
 			}
-			// @include mobile-l {
-			// 	/*425px-480px*/
-			// 	top: 3rem;
-			// 	left: -4.5rem;
-			// }
-			// @include mobile-port {
-			// 	/*481px-767px*/
-			// 	left: -13%;
-			// }
-			// @include tablet {
-			// 	/*768px-1024px*/
-			// 	left: -24%;
-			// }
+			@include mobile-l {
+				/*425px-480px*/
+				top: 3rem;
+				left: -4.5rem;
+			}
+			@include mobile-port {
+				/*481px-767px*/
+				left: -13%;
+			}
+			@include tablet {
+				/*768px-1024px*/
+				left: -24%;
+			}
 		}
 		&--description {
-			padding: 5rem 7rem 5rem 0;
+			padding: 4rem 7rem 5rem 0;
 			font-size: 1.8rem;
 			text-align: justify;
 			font-family: $font-sora;
@@ -115,7 +116,7 @@
 	&__image {
 		text-align: center;
 		img {
-			width: 28rem;
+			width: 38rem;
 			margin-top: -5rem;
 		}
 		@include mobile-m {

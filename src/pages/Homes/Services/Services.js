@@ -29,6 +29,7 @@ const Services = () => {
 						</div>
 					</div>
 				</div>
+
 				<div className="row pad-top">
 					{services.map((service) => (
 						<SingleServices key={service._id} service={service}></SingleServices>

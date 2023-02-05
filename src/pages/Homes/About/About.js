@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import myPhoto from '../../../images/me.png';
 import './About.scss';
 const About = () => {
 	return (
@@ -22,7 +21,7 @@ const About = () => {
 					</div>
 					<div className="col-md-6 col-sm-12">
 						<div className="about__image">
-							<img src={myPhoto} alt="" className="img-fluid" />
+							<img src="https://i.ibb.co/6Z6fsTW/My-photo.png" alt="" className="img-fluid" />
 						</div>
 					</div>
 				</div>

@@ -4,7 +4,7 @@
 @import '../../../sass/_animations';
 @import '../../../sass/_button';
 .banner {
-	height: 70rem;
+	height: 100vh;
 	width: 100%;
 	background-size: cover;
 	position: absolute;
@@ -140,5 +140,5 @@
 	}
 }
 .back_banner {
-	height: 54rem;
+	height: 70rem;
 }
