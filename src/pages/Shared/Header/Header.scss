@@ -45,6 +45,9 @@ $shadow: 0 1rem 3rem rgba(57, 56, 61, 0.205);
 		}
 		.ham {
 			cursor: pointer;
+			position: fixed;
+			right: 8%;
+			top: 4%;
 			-webkit-tap-highlight-color: transparent;
 			transition: transform 400ms;
 			-moz-user-select: none;
@@ -82,7 +85,7 @@ $shadow: 0 1rem 3rem rgba(57, 56, 61, 0.205);
 		height: 70px;
 		justify-content: space-between;
 		background: #000;
-		height: 100vh;
+		height: 109vh;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -137,5 +140,6 @@ $shadow: 0 1rem 3rem rgba(57, 56, 61, 0.205);
 		/* purgecss ignore current */
 		opacity: 1;
 		visibility: visible;
+		position: fixed;
 	}
 }

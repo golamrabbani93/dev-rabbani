@@ -9,7 +9,7 @@ const About = () => {
 				<div className="row">
 					<div className="col-md-6 col-sm-12 about__text">
 						<p className="services__top--sub">about</p>
-						<h3 className="services__top--main">ABOUT I Love Creating Websites</h3>
+						<h3 className="services__top--main">I Love Creating Websites</h3>
 						<div className="head-animation">
 							<div className="post-heading"></div>
 						</div>
