@@ -67,30 +67,31 @@
 			// width: 37rem;
 			// height: 14rem;
 			position: absolute;
-			top: 8%;
-			left: 7.5%;
-			// @include mobile-m {
-			// 	/*320px-375px*/
-			// 	left: 13%;
-			// }
-			// @include mobile-s {
-			// 	/*375px-424px*/
-			// 	top: 1rem;
-			// 	left: -4.5rem;
-			// }
-			// @include mobile-l {
-			// 	/*425px-480px*/
-			// 	top: 3rem;
-			// 	left: -4.5rem;
-			// }
-			// @include mobile-port {
-			// 	/*481px-767px*/
-			// 	left: -13%;
-			// }
-			// @include tablet {
-			// 	/*768px-1024px*/
-			// 	left: -24%;
-			// }
+			top: 0;
+			left: -13.5rem;
+			@include mobile-m {
+				/*320px-375px*/
+				top: 6px;
+				left: -12%;
+			}
+			@include mobile-s {
+				/*375px-424px*/
+				top: 1rem;
+				left: -4.5rem;
+			}
+			@include mobile-l {
+				/*425px-480px*/
+				top: 3rem;
+				left: -4.5rem;
+			}
+			@include mobile-port {
+				/*481px-767px*/
+				left: -13%;
+			}
+			@include tablet {
+				/*768px-1024px*/
+				left: -24%;
+			}
 		}
 		&--description {
 			padding: 4rem 7rem 5rem 0;
