@@ -1,9 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
 import './Testimonial.scss';
-import Qoute from '../../../images/testimonial/qoute.png';
+import {useQuery} from '@tanstack/react-query';
+import SingleTestimonial from './SingleTestimonial';
 
 const Testimonial = () => {
+	// *Load API
+	const {data: testimonials = []} = useQuery({
+		queryKey: ['testimonials'],
+		queryFn: async () => {
+			const res = await fetch('http://localhost:5000/testimonials');
+			const data = await res.json();
+			return data;
+		},
+	});
 	var settings = {
 		dots: true,
 		infinite: true,
@@ -22,114 +32,13 @@ const Testimonial = () => {
 		<section className="testimonial" style={testimonialBg}>
 			<div className="container">
 				<div className="row">
-					{/* <div className="testimonial__slider">
-                    <div className="testimonial__item text-center text-white">
-                        <img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-                        <p className="testimonial__item--content">
-                            These guys are awesome! Each time I needed their help, their response was quick and
-                            very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-                            truly recommend this theme!!!
-                        </p>
-                        <div className="testimonial__item--data d-flex flex-wrap">
-                            <img src="images/testimonial/1.png" alt="" />
-                            <div className="data-content">
-                                <h4 className="name">Jonis Kobra</h4>
-                                <p className="desinagtion">Evanto user</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial__item text-center text-white">
-                        <img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-                        <p className="testimonial__item--content">
-                            These guys are awesome! Each time I needed their help, their response was quick and
-                            very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-                            truly recommend this theme!!!
-                        </p>
-                        <div className="testimonial__item--data d-flex flex-wrap">
-                            <img src="images/testimonial/1.png" alt="" />
-                            <div className="data-content">
-                                <h4 className="name">Jonis Kobra</h4>
-                                <p className="desinagtion">Evanto user</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial__item text-center text-white">
-                        <img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-                        <p className="testimonial__item--content">
-                            These guys are awesome! Each time I needed their help, their response was quick and
-                            very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-                            truly recommend this theme!!!
-                        </p>
-                        <div className="testimonial__item--data d-flex flex-wrap">
-                            <img src="images/testimonial/1.png" alt="" />
-                            <div className="data-content">
-                                <h4 className="name">Jonis Kobra</h4>
-                                <p className="desinagtion">Evanto user</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
 					<Slider {...settings} className="">
-						<div className="testimonial__item text-center text-white">
-							<img src={Qoute} className="testimonial__item--image" alt="" />
-							<p className="testimonial__item--content">
-								These guys are awesome! Each time I needed their help, their response was quick and
-								very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-								truly recommend this theme!!!
-							</p>
-							<div className="testimonial__item--data d-flex flex-wrap">
-								<img src="images/testimonial/1.png" alt="" />
-								<div className="data-content">
-									<h4 className="name">Jonis Kobra</h4>
-									<p className="desinagtion">Evanto user</p>
-								</div>
-							</div>
-						</div>
-						<div className="testimonial__item text-center text-white">
-							<img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-							<p className="testimonial__item--content">
-								These guys are awesome! Each time I needed their help, their response was quick and
-								very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-								truly recommend this theme!!!
-							</p>
-							<div className="testimonial__item--data d-flex flex-wrap">
-								<img src="images/testimonial/1.png" alt="" />
-								<div className="data-content">
-									<h4 className="name">Jonis Kobra</h4>
-									<p className="desinagtion">Evanto user</p>
-								</div>
-							</div>
-						</div>
-						<div className="testimonial__item text-center text-white">
-							<img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-							<p className="testimonial__item--content">
-								These guys are awesome! Each time I needed their help, their response was quick and
-								very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-								truly recommend this theme!!!
-							</p>
-							<div className="testimonial__item--data d-flex flex-wrap">
-								<img src="images/testimonial/1.png" alt="" />
-								<div className="data-content">
-									<h4 className="name">Jonis Kobra</h4>
-									<p className="desinagtion">Evanto user</p>
-								</div>
-							</div>
-						</div>
-						<div className="testimonial__item text-center text-white">
-							<img src="images/testimonial/qoute.png" className="testimonial__item--image" alt="" />
-							<p className="testimonial__item--content">
-								These guys are awesome! Each time I needed their help, their response was quick and
-								very helpful. Also, the theme is very flexible. Five stars from me for everything! I
-								truly recommend this theme!!!
-							</p>
-							<div className="testimonial__item--data d-flex flex-wrap">
-								<img src="images/testimonial/1.png" alt="" />
-								<div className="data-content">
-									<h4 className="name">Jonis Kobra</h4>
-									<p className="desinagtion">Evanto user</p>
-								</div>
-							</div>
-						</div>
+						{testimonials.map((testimonial) => (
+							<SingleTestimonial
+								key={testimonial._id}
+								testimonial={testimonial}
+							></SingleTestimonial>
+						))}
 					</Slider>
 				</div>
 			</div>

@@ -1,47 +1,6 @@
 @import '../../../sass/_variables';
 @import '../../../sass/_responsive';
 @import '../../../sass/_headAnimation';
-// .services {
-// 	&:hover {
-// 		background-color: #faf3f3;
-// 	}
-// 	&__top {
-// 		position: relative;
-// 		&--sub {
-// 			font-size: 2.3rem;
-// 			font-family: $font-bebas;
-// 			color: $color-primary;
-// 			@include mobile-m {
-// 				/*320px-375px*/
-// 				font-size: 3.3rem;
-// 			}
-// 			@include mobile-s {
-// 				/*375px-424px*/
-// 				font-size: 3.3rem;
-// 			}
-// 			@include mobile-l {
-// 				/*425px-480px*/
-// 				font-size: 3.5rem;
-// 			}
-// 		}
-// 		&--main {
-// 			font-size: 4rem;
-// 			font-family: $font-bebas;
-// 			@include mobile-m {
-// 				/*320px-375px*/
-// 				font-size: 5rem;
-// 			}
-// 			@include mobile-s {
-// 				/*375px-424px*/
-// 				font-size: 5rem;
-// 			}
-// 			@include mobile-l {
-// 				/*425px-480px*/
-// 				font-size: 6rem;
-// 			}
-// 		}
-// 	}
-// }
 .about {
 	padding: 10rem 0;
 	position: relative;
