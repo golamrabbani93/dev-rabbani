@@ -9,7 +9,7 @@ const Testimonial = () => {
 	const {data: testimonials = []} = useQuery({
 		queryKey: ['testimonials'],
 		queryFn: async () => {
-			const res = await fetch('http://localhost:5000/testimonials');
+			const res = await fetch('https://server.webrabbani.com/testimonials');
 			const data = await res.json();
 			return data;
 		},
