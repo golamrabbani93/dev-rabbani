@@ -1,9 +1,10 @@
 import React from 'react';
+import BreadCumb from '../../Shared/BreadCumb/BreadCumb';
 
 const About = () => {
 	return (
 		<div>
-			<h2>this is about page</h2>
+			<BreadCumb></BreadCumb>
 		</div>
 	);
 };
