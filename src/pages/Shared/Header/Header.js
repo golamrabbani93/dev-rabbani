@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Header.scss';
 import logo from '../../../images/logo.png';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import rightNavimage from '../../../images/manu-image-1.jpg';
 const Header = () => {
 	const rightImage = {backgroundImage: `url(${rightNavimage})`};
@@ -11,7 +11,7 @@ const Header = () => {
 			<div className="container">
 				<div className="header__logo-svg d-flex justify-content-between">
 					<div className="logo">
-						<Link href="home.html">
+						<Link to={'/'}>
 							<img src={logo} className="logo__img" alt="logo" />
 						</Link>
 					</div>
@@ -37,20 +37,22 @@ const Header = () => {
 						<nav className="menu text-start">
 							<ul>
 								<li>
-									<Link className="active">home</Link>
+									<NavLink to="/" end>
+										home
+									</NavLink>
 								</li>
 								<li>
-									<Link>about</Link>
+									<NavLink to="/about">about</NavLink>
+								</li>
+								{/* <li>
+									<NavLink>services</NavLink>
 								</li>
 								<li>
-									<Link>services</Link>
+									<NavLink>portfolio</NavLink>
 								</li>
 								<li>
-									<Link>portfolio</Link>
-								</li>
-								<li>
-									<Link>contact</Link>
-								</li>
+									<NavLink>contact</NavLink>
+								</li> */}
 							</ul>
 						</nav>
 					</div>
