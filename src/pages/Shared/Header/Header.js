@@ -37,12 +37,14 @@ const Header = () => {
 						<nav className="menu text-start">
 							<ul>
 								<li>
-									<NavLink to="/" end>
+									<NavLink to="/" end onClick={() => setHamOpen(!hamOpen)}>
 										home
 									</NavLink>
 								</li>
 								<li>
-									<NavLink to="/about">about</NavLink>
+									<NavLink to="/about" onClick={() => setHamOpen(!hamOpen)}>
+										about
+									</NavLink>
 								</li>
 								{/* <li>
 									<NavLink>services</NavLink>
