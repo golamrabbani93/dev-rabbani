@@ -1,0 +1,38 @@
+@import '../../../sass/_variables';
+.biographySkill {
+	padding: 0 0 15rem 0;
+	background-color: $color-black;
+	color: $color-white;
+	&__biography {
+		.title {
+			font-size: 3rem;
+			font-family: $font-bebas;
+			padding: 2rem 0;
+		}
+		.description {
+			font-size: 1.6rem;
+			text-align: justify;
+			line-height: 1.7;
+			font-family: $font-sora;
+			font-weight: 300;
+		}
+	}
+	&__skill {
+		position: relative;
+		padding-left: 5rem;
+		margin-top: 2px;
+		h3 {
+			font-size: 3rem;
+			font-family: $font-bebas;
+			padding: 2rem 0;
+		}
+		.skillbar {
+			margin: 1rem 0;
+			.skillbar-title {
+				font-size: 2rem;
+				margin-bottom: -10px;
+				font-family: $font-bebas;
+			}
+		}
+	}
+}
