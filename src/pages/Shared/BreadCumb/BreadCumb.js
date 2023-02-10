@@ -7,11 +7,11 @@ const BreadCumb = () => {
 		backgroundImage: ` url(${BreadBG})`,
 	};
 	return (
-		<section class="breadcumb" style={Bg}>
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="breadcumb__text">
+		<section className="breadcumb" style={Bg}>
+			<div className="container">
+				<div className="row">
+					<div className="col-xl-12">
+						<div className="breadcumb__text">
 							<h4>About Me</h4>
 							<ul>
 								<li>

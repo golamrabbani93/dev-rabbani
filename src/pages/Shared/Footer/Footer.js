@@ -13,15 +13,15 @@ import {
 } from 'react-icons/fa';
 const Footer = () => {
 	return (
-		<footer class="footer">
-			<div class="footer__top">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-12">
-							<div class="single-footer">
+		<footer className="footer">
+			<div className="footer__top">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-4 col-12">
+							<div className="single-footer">
 								<h4>quick links</h4>
-								<div class="head-animation">
-									<div class="post-heading"></div>
+								<div className="head-animation">
+									<div className="post-heading"></div>
 								</div>
 								<ul>
 									<li>
@@ -42,11 +42,11 @@ const Footer = () => {
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-4 col-12">
-							<div class="single-footer contact-us">
+						<div className="col-lg-4 col-12">
+							<div className="single-footer contact-us">
 								<h4>Contact Us</h4>
-								<div class="head-animation">
-									<div class="post-heading"></div>
+								<div className="head-animation">
+									<div className="post-heading"></div>
 								</div>
 
 								<ul>
@@ -71,14 +71,14 @@ const Footer = () => {
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="single-footer newsletter">
+						<div className="col-lg-4">
+							<div className="single-footer newsletter">
 								<h4>newslatter</h4>
-								<div class="head-animation">
-									<div class="post-heading"></div>
+								<div className="head-animation">
+									<div className="post-heading"></div>
 								</div>
-								<form class="form">
-									<input type="email" class="form-control" placeholder="E-mail" />
+								<form className="form">
+									<input type="email" className="form-control" placeholder="E-mail" />
 									<button type="submit">Subscribe</button>
 								</form>
 							</div>
@@ -86,18 +86,18 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div class="footer__bottom">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="footer__bottom--logo">
+			<div className="footer__bottom">
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-lg-4">
+							<div className="footer__bottom--logo">
 								<Link>
 									<img src={logo} alt="" />
 								</Link>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="footer__bottom--social">
+						<div className="col-lg-4">
+							<div className="footer__bottom--social">
 								<ul>
 									<li>
 										<Link>
@@ -122,8 +122,8 @@ const Footer = () => {
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="footer__bottom--copyright">
+						<div className="col-lg-4">
+							<div className="footer__bottom--copyright">
 								&copy;
 								<script>document.write(new Date().getFullYear());</script>
 								webrabbani. All Rights Reserved.
