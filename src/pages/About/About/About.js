@@ -7,7 +7,7 @@ import Biography from '../Biography/Biography';
 const About = () => {
 	return (
 		<div>
-			<BreadCumb> </BreadCumb>
+			<BreadCumb data={'About Me'}> </BreadCumb>
 			<AboutMe></AboutMe>
 			<Biography></Biography>
 			<Testimonial></Testimonial>

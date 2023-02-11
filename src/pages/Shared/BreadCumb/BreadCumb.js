@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import BreadBG from '../../../images/breadcumb.png';
 import './BreadCumb.scss';
-const BreadCumb = () => {
+const BreadCumb = ({data}) => {
 	const Bg = {
 		backgroundImage: ` url(${BreadBG})`,
 	};
@@ -12,7 +12,7 @@ const BreadCumb = () => {
 				<div className="row">
 					<div className="col-xl-12">
 						<div className="breadcumb__text">
-							<h4>About Me</h4>
+							<h4>{data}</h4>
 							<ul>
 								<li>
 									<Link to={'/'}>Home</Link>

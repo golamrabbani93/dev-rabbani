@@ -46,6 +46,11 @@ const Header = () => {
 										about
 									</NavLink>
 								</li>
+								<li>
+									<NavLink to="/services" onClick={() => setHamOpen(!hamOpen)}>
+										Services
+									</NavLink>
+								</li>
 								{/* <li>
 									<NavLink>services</NavLink>
 								</li>
