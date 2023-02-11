@@ -17,7 +17,7 @@ const BreadCumb = ({data}) => {
 								<li>
 									<Link to={'/'}>Home</Link>
 								</li>
-								/<li>About Me</li>
+								/<li>{data}</li>
 							</ul>
 						</div>
 					</div>

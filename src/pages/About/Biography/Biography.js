@@ -3,7 +3,7 @@ import ProgressBar from 'react-animated-progress-bar';
 import './Biography.scss';
 const Biography = () => {
 	//* progress bar scroll area
-	const myRef = document.querySelector('.biographySkill');
+	const myRef = document.querySelector('.biographySkill__biography');
 	return (
 		<div className="biographySkill">
 			<div className="container">
