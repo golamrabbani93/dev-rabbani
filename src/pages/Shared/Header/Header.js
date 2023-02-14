@@ -51,15 +51,11 @@ const Header = () => {
 										Services
 									</NavLink>
 								</li>
-								{/* <li>
-									<NavLink>services</NavLink>
-								</li>
 								<li>
-									<NavLink>portfolio</NavLink>
+									<NavLink to="/portfolio" onClick={() => setHamOpen(!hamOpen)}>
+										PortFolio
+									</NavLink>
 								</li>
-								<li>
-									<NavLink>contact</NavLink>
-								</li> */}
 							</ul>
 						</nav>
 					</div>
