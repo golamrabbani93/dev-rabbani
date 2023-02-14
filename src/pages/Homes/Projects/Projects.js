@@ -3,7 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Projects.scss';
 import SingleProject from './SingleProject';
-const Projects = () => {
+const Projects = ({btn}) => {
 	const {data: projects = []} = useQuery({
 		queryKey: [],
 		queryFn: async () => {
@@ -30,7 +30,7 @@ const Projects = () => {
 						<SingleProject key={project._id} project={project}></SingleProject>
 					))}
 
-					<div className="button text-center pt-5">
+					<div className={`button text-center pt-5 ${btn === 'none' ? 'd-none' : ''}`}>
 						<Link className="custom_button m-auto">View All Projects</Link>
 					</div>
 				</div>

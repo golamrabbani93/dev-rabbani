@@ -4,7 +4,7 @@ import './Services.scss';
 import SingleServices from './SingleServices';
 import Bg from '../../../images/banner/banner-service.png';
 import {Link} from 'react-router-dom';
-const Services = () => {
+const Services = ({btn}) => {
 	const {data: services = []} = useQuery({
 		queryKey: ['services'],
 		queryFn: async () => {
@@ -34,8 +34,10 @@ const Services = () => {
 					{services.map((service) => (
 						<SingleServices key={service._id} service={service}></SingleServices>
 					))}
-					<div className="button text-center pt-5">
-						<Link className="custom_button m-auto">View All Services</Link>
+					<div className={`button text-center pt-5 ${btn === 'none' ? 'd-none' : ''}`}>
+						<Link to={`services`} className="custom_button m-auto">
+							View All Services
+						</Link>
 					</div>
 				</div>
 			</div>
