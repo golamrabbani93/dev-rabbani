@@ -45,7 +45,7 @@ const Brand = () => {
 	const {data: brands = []} = useQuery({
 		queryKey: ['brands'],
 		queryFn: async () => {
-			const res = await fetch('https://server.webrabbani.com/brands');
+			const res = await fetch('https://webrabbani-server.vercel.app/brands');
 			const data = await res.json();
 			return data;
 		},

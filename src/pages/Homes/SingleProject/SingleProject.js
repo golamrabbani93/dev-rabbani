@@ -9,7 +9,7 @@ const SingleProject = () => {
 	const {data: project = [], isLoading} = useQuery({
 		queryKey: [id.id],
 		queryFn: async () => {
-			const res = await fetch(`https://server.webrabbani.com/project/${id.id}`);
+			const res = await fetch(`https://webrabbani-server.vercel.app/project/${id.id}`);
 			const data = await res.json();
 			return data;
 		},
