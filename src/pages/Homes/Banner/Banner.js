@@ -15,7 +15,7 @@ const Banner = () => {
 					<div className="banner__banner-text text-center">
 						<h1 className="heading-primary">
 							<span className="heading-primary--sub m-0">Web Developer</span>
-							<span className="heading-primary--main m-0">Rabbani</span>
+							<span className="heading-primary--main ">Rabbani</span>
 						</h1>
 						<a
 							href="https://drive.google.com/file/d/1oxdlyk0f3CHNwjvDxV6sXLu2WXMyPiIW/view?usp=sharing"

@@ -21,11 +21,22 @@
 		@include mobile-m {
 			/*320px-480px*/
 			left: 2%;
+			top: 50%;
 		}
 		@include mobile-s {
 			/*376px-480px*/
 			left: 4%;
+			top: 50%;
 		}
+		@include mobile-l {
+			/*425px-480px*/
+			top: 55%;
+		}
+		@include tablet {
+			/*768px-1024px*/
+			top: 55%;
+		}
+
 		.heading-primary {
 			color: $color-white;
 			text-align: center;
@@ -46,10 +57,16 @@
 				@include mobile-m {
 					/*320px-375px*/
 					font-size: 15rem;
+					margin-bottom: 5rem;
 				}
 				@include mobile-s {
 					/*376px-480px*/
 					font-size: 17rem;
+					margin-bottom: 5rem;
+				}
+				@include mobile-l {
+					/*425px-480px*/
+					margin-bottom: 5rem;
 				}
 			}
 		}
@@ -68,21 +85,31 @@
 			left: 36%;
 			@include mobile-m {
 				/*320px-375px*/
-				width: 28rem;
-				height: 29rem;
-				top: 2rem;
-				left: 31%;
+				width: 60rem;
+				height: 60rem;
+				top: 1rem;
+				left: 5%;
 			}
 			@include mobile-s {
 				/*376px-480px*/
-				left: 36%;
-				width: 26rem;
-				height: 32rem;
-				top: -1rem;
+				width: 65rem;
+				height: 65rem;
+				top: 1rem;
+				left: 10%;
 			}
 			@include mobile-l {
 				/*426px-480px*/
-				left: 32%;
+				left: 10%;
+				width: 70rem;
+				height: 70rem;
+				top: 0rem;
+			}
+			@include tablet {
+				/*768px-1024px*/
+				width: 50rem;
+				height: 50rem;
+				top: -4rem;
+				left: 24%;
 			}
 			@include desktop {
 				/*(min-width: 1401px)*/
@@ -98,14 +125,14 @@
 			@include mobile-m {
 				/*320px-375px*/
 				width: 120px;
-				top: -1rem;
-				left: 33%;
+				top: 10rem;
+				left: 31%;
 			}
 			@include mobile-s {
 				/*376px-480px*/
 				width: 120px;
-				top: -1rem;
-				left: 33%;
+				top: 10rem;
+				left: 37%;
 			}
 		}
 		.dot {
@@ -140,5 +167,5 @@
 	}
 }
 .back_banner {
-	height: 70rem;
+	height: 85vh;
 }

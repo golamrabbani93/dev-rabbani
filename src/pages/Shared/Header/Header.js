@@ -8,7 +8,7 @@ const Header = () => {
 	const [hamOpen, setHamOpen] = useState(false);
 	return (
 		<header className="header">
-			<div className="container">
+			<div className="container-fluid">
 				<div className="header__logo-svg d-flex justify-content-between">
 					<div className="logo">
 						<Link to={'/'}>

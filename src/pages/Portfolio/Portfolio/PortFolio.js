@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import BreadCumb from '../../Shared/BreadCumb/BreadCumb';
+import Projects from '../../Homes/Projects/Projects';
 
 const PortFolio = () => {
 	useEffect(() => {
@@ -7,7 +8,12 @@ const PortFolio = () => {
 	}, []);
 	return (
 		<div>
-			<BreadCumb data={'Portfolio'}></BreadCumb>
+			<div>
+				<BreadCumb data={'Portfolio'}></BreadCumb>
+			</div>
+			<div>
+				<Projects></Projects>
+			</div>
 		</div>
 	);
 };
