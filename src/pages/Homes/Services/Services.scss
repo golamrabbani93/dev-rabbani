@@ -63,26 +63,6 @@
 				font-size: 6rem;
 			}
 		}
-		.head-animation {
-			// @include mobile-s {
-			// 	/*375px-424px*/
-			// 	left: 20rem;
-			// 	top: 0.6rem;
-			// }
-			// @include mobile-l {
-			// 	/*425px-480px*/
-			// 	top: 20%;
-			// 	left: 25rem;
-			// }
-			// @include mobile-port {
-			// 	/*481px-767px*/
-			// 	left: 15rem;
-			// }
-			// @include tablet {
-			// 	/*768px-1024px*/
-			// 	left: 31%;
-			// }
-		}
 	}
 	&__item {
 		background-color: $color-white;

@@ -1,9 +1,7 @@
 @import '../../../sass/_variables';
+@import '../../../sass/_responsive';
+@import '../../../sass/_typography';
 .footer {
-	.head-animation {
-		top: -3rem;
-		left: -40%;
-	}
 	&__top {
 		padding: 5rem 0 4rem 0;
 		background: $footer-top;
@@ -17,7 +15,6 @@
 			}
 			.head-animation {
 				top: -3rem;
-				left: -40%;
 			}
 			ul {
 				list-style: none;
@@ -54,8 +51,8 @@
 			}
 		}
 		.newsletter {
-			form {
-				input {
+			.form {
+				.form-control {
 					width: 35rem;
 					height: 5rem;
 					margin: 7rem 0 2rem 0;
@@ -65,6 +62,18 @@
 						box-shadow: none !important;
 						outline: none;
 						border: 2px solid $color-primary;
+					}
+					@include mobile-m {
+						/*320px-374px*/
+						margin: 1rem auto;
+					}
+					@include mobile-s {
+						/*375px-424px*/
+						margin: 1rem auto;
+					}
+					@include mobile-l {
+						/*425px-480px*/
+						margin: 1rem auto;
 					}
 				}
 				button {

@@ -16,8 +16,8 @@ const Footer = () => {
 		<footer className="footer">
 			<div className="footer__top">
 				<div className="container">
-					<div className="row">
-						<div className="col-lg-4 col-12">
+					<div className="row text-center">
+						<div className="col-lg-4 col-md-6">
 							<div className="single-footer">
 								<h4>quick links</h4>
 								<div className="head-animation">
@@ -42,7 +42,7 @@ const Footer = () => {
 								</ul>
 							</div>
 						</div>
-						<div className="col-lg-4 col-12">
+						<div className="col-lg-4 col-md-6">
 							<div className="single-footer contact-us">
 								<h4>Contact Us</h4>
 								<div className="head-animation">
@@ -71,7 +71,7 @@ const Footer = () => {
 								</ul>
 							</div>
 						</div>
-						<div className="col-lg-4">
+						<div className="col-lg-4 col-md-6">
 							<div className="single-footer newsletter">
 								<h4>newslatter</h4>
 								<div className="head-animation">
@@ -86,7 +86,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="footer__bottom">
+			<div className="footer__bottom text-center text-lg-start">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-lg-4">
