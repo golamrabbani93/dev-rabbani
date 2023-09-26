@@ -8,19 +8,19 @@
 		position: relative;
 		@include mobile-m {
 			/*320px-375px*/
-			padding-left: 1.7rem;
+			padding-left: 6rem !important;
 		}
 		@include mobile-s {
 			/*375px-424px*/
-			padding-left: 5rem;
+			padding-left: 6rem !important;
 		}
 		@include mobile-l {
 			/*425px-480px*/
-			padding-left: 5rem;
+			padding-left: 6rem !important;
 		}
 		@include mobile-port {
 			/*481px-767px*/
-			padding-left: 4rem;
+			padding-left: 6rem !important;
 		}
 		.head-animation {
 			// width: 37rem;
@@ -30,26 +30,23 @@
 			left: 5rem;
 			@include mobile-m {
 				/*320px-375px*/
-				top: 6px;
-				left: -12%;
+				left: 22%;
 			}
 			@include mobile-s {
 				/*375px-424px*/
-				top: 1rem;
-				left: -4.5rem;
+				left: 18%;
 			}
 			@include mobile-l {
 				/*425px-480px*/
-				top: 3rem;
-				left: -4.5rem;
+				left: 16%;
 			}
 			@include mobile-port {
 				/*481px-767px*/
-				left: -13%;
+				left: 14%;
 			}
 			@include tablet {
 				/*768px-1024px*/
-				left: -24%;
+				left: 12%;
 			}
 		}
 		&--description {
