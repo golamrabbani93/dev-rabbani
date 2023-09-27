@@ -4,8 +4,12 @@ import {useParams} from 'react-router-dom';
 import {PhotoProvider, PhotoView} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import './SingleProject.scss';
+import {useEffect} from 'react';
 const SingleProject = () => {
 	const id = useParams();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	const {data: project = [], isLoading} = useQuery({
 		queryKey: [id.id],
 		queryFn: async () => {
@@ -19,41 +23,44 @@ const SingleProject = () => {
 	}
 	const {feature, name, site_images, technology} = project;
 	return (
-		<div className="project position-absolute top-0 ">
-			<div className="container ">
-				<h2 className="heading-primary--main text-white font-bebas mb-5">{name}</h2>
-				<div className="row gap-5 mx-auto text-center">
-					<PhotoProvider>
-						{site_images.map((item, index) => (
-							<PhotoView key={index} src={item}>
-								{index < 3 ? (
-									<img
-										className="slide-img pb-5"
-										src={item}
-										alt=""
-										width={`300px`}
-										height={`auto`}
-									/>
-								) : undefined}
-							</PhotoView>
-						))}
-					</PhotoProvider>
-				</div>
-				<div className="project_details pb-5">
-					<h3 className="text-white fe">
-						<span className="me-4" style={{color: '#D94D3A'}}>
-							Technology Used:
-						</span>
-						{technology}
-					</h3>
-					<h3 className="text-white fe">
-						<span className="me-4" style={{color: '#D94D3A'}}>
-							Feature:
-						</span>
-						{feature}
-					</h3>
+		<div>
+			<div className="project position-absolute top-0 ">
+				<div className="container ">
+					<h2 className="heading-primary--main text-white font-bebas mb-5">{name}</h2>
+					<div className="row gap-5 mx-auto text-center">
+						<PhotoProvider>
+							{site_images.map((item, index) => (
+								<PhotoView key={index} src={item}>
+									{index < 3 ? (
+										<img
+											className="slide-img pb-5"
+											src={item}
+											alt=""
+											width={`300px`}
+											height={`auto`}
+										/>
+									) : undefined}
+								</PhotoView>
+							))}
+						</PhotoProvider>
+					</div>
+					<div className="project_details pb-5">
+						<h3 className="text-white fe">
+							<span className="me-4" style={{color: '#D94D3A'}}>
+								Technology Used:
+							</span>
+							{technology}
+						</h3>
+						<h3 className="text-white fe">
+							<span className="me-4" style={{color: '#D94D3A'}}>
+								Feature:
+							</span>
+							{feature}
+						</h3>
+					</div>
 				</div>
 			</div>
+			<div className="extra-margin"></div>
 		</div>
 	);
 };

@@ -10,9 +10,10 @@ const PortFolio = () => {
 		<div>
 			<div>
 				<BreadCumb data={'Portfolio'}></BreadCumb>
+				<div style={{paddingTop: '25rem'}}></div>
 			</div>
 			<div>
-				<Projects></Projects>
+				<Projects btn={'none'}></Projects>
 			</div>
 		</div>
 	);
