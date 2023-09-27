@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+index.json
+portfolio.json
 
 # production
 /build
