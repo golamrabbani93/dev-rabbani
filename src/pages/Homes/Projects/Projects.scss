@@ -4,7 +4,14 @@
 .portfolio {
 	padding: 10rem 0;
 	transition: 2s;
-	// height: 75rem;
+	@include desktop {
+		/*min-width: 1201px*/
+		.col-xl-4 {
+			flex: 0 0 auto;
+			width: 26.333333%;
+			margin: 0 29px;
+		}
+	}
 	&:hover {
 		background-color: $section-hover;
 	}
@@ -32,7 +39,7 @@
 		}
 		@include tablet {
 			/*768px-1024px*/
-			padding-left: 8rem;
+			padding-left: 8rem !important;
 		}
 		.item {
 			width: 35rem;

@@ -4,10 +4,8 @@ import {Link} from 'react-router-dom';
 const SingleProject = ({project}) => {
 	const {_id, name, image, live_link} = project;
 	return (
-		<div className="col-sm-12 col-md-6 col-xl-4 portfolio__items">
+		<div className="col-sm-12 col-md-6 col-xl-4 portfolio__items W-0	">
 			<div className="item" style={{backgroundImage: `url(${image})`}}>
-				{/* <img className="item--image" src={image} alt="" /> */}
-
 				<div className="item--text">
 					<div className="text-inner">
 						<p>

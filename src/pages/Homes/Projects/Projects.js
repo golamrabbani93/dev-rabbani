@@ -25,7 +25,7 @@ const Projects = ({btn}) => {
 						</div>
 					</div>
 				</div>
-				<div className="row">
+				<div className="row justify-content-center">
 					{projects.map((project) => (
 						<SingleProject key={project._id} project={project}></SingleProject>
 					))}

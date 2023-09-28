@@ -24,12 +24,12 @@
 	}
 }
 @mixin tablet-port {
-	@media (min-width: 1025px) and (max-width: 1280px) {
+	@media (min-width: 1025px) and (max-width: 1200px) {
 		@content;
 	}
 }
 @mixin desktop {
-	@media (min-width: 1401px) {
+	@media (min-width: 1201px) {
 		@content;
 	}
 }
