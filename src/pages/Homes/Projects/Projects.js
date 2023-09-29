@@ -3,8 +3,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Projects.scss';
 import SingleProject from './SingleProject';
+import Loader from '../../Shared/Loader/Loader';
 const Projects = ({btn}) => {
-	const {data: projects = []} = useQuery({
+	const {data: projects = [], isLoading} = useQuery({
 		queryKey: [],
 		queryFn: async () => {
 			const res = await fetch('https://webrabbani-server.vercel.app/projects');
@@ -12,6 +13,9 @@ const Projects = ({btn}) => {
 			return data;
 		},
 	});
+	if (isLoading) {
+		return <Loader></Loader>;
+	}
 
 	return (
 		<section className="portfolio">

@@ -5,6 +5,7 @@ import {PhotoProvider, PhotoView} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import './SingleProject.scss';
 import {useEffect} from 'react';
+import Loader from '../../Shared/Loader/Loader';
 const SingleProject = () => {
 	const id = useParams();
 	useEffect(() => {
@@ -19,7 +20,7 @@ const SingleProject = () => {
 		},
 	});
 	if (isLoading) {
-		return <h2>loading..........</h2>;
+		return <Loader></Loader>;
 	}
 	const {name, site_images, technology} = project;
 	return (
