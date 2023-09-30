@@ -11,14 +11,32 @@ const PortFolio = () => {
 	}, []);
 	const btnTexts = ['all', 'dynamic', 'static', 'games'];
 	const [active, setActive] = useState(0);
-	const {data: projects = [], isLoading} = useQuery({
+
+	const [projects, setProjects] = useState([]);
+	const [filterProjects, SetFilterProjects] = useState([]);
+	// !Load projects from Database
+	const {data, isLoading} = useQuery({
 		queryKey: [],
 		queryFn: async () => {
 			const res = await fetch('https://webrabbani-server.vercel.app/projects');
 			const data = await res.json();
+			setProjects(data);
+			SetFilterProjects(data);
 			return data;
 		},
 	});
+
+	// !Handle Filter
+	const handelFilter = (e, index) => {
+		setActive(index);
+		const btnValue = e.target.innerText;
+		if (btnValue === 'all') {
+			SetFilterProjects(projects);
+			return;
+		}
+		const filterdItems = projects.filter((project) => project.filter.includes(btnValue));
+		SetFilterProjects(filterdItems);
+	};
 	if (isLoading) {
 		return <Loader></Loader>;
 	}
@@ -32,12 +50,13 @@ const PortFolio = () => {
 			<div className="portfolio">
 				<div className="container">
 					<div className="row">
-						<div class="btn-group filter">
+						<div className="btn-group filter">
 							{btnTexts.map((btn, index) => (
 								<button
-									onClick={() => setActive(index)}
+									key={index}
+									onClick={(e) => handelFilter(e, index)}
 									data-filter={btn === 'all' ? '*' : btn}
-									class={`btn ${index === active && 'active'}`}
+									className={`btn ${index === active && 'active'}`}
 								>
 									{btn}
 								</button>
@@ -57,7 +76,7 @@ const PortFolio = () => {
 						</div>
 					</div>
 					<div className="row justify-content-center grid">
-						{projects.map((project) => (
+						{filterProjects.map((project) => (
 							<SingleProject key={project._id} project={project}></SingleProject>
 						))}
 					</div>
