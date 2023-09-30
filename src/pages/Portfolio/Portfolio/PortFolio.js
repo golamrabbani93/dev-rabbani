@@ -4,7 +4,7 @@ import Loader from '../../Shared/Loader/Loader';
 import {useQuery} from '@tanstack/react-query';
 import SingleProject from '../../Homes/Projects/SingleProject';
 import {useState} from 'react';
-
+import {motion} from 'framer-motion';
 const PortFolio = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -75,11 +75,11 @@ const PortFolio = () => {
 							</button> */}
 						</div>
 					</div>
-					<div className="row justify-content-center grid">
+					<motion.div layout className="row justify-content-center grid">
 						{filterProjects.map((project) => (
 							<SingleProject key={project._id} project={project}></SingleProject>
 						))}
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

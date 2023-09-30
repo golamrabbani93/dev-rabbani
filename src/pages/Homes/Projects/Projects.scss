@@ -4,6 +4,7 @@
 .portfolio {
 	padding: 10rem 0;
 	transition: 2s;
+	overflow-y: hidden;
 	@include desktop {
 		/*min-width: 1201px*/
 		.col-xl-4 {

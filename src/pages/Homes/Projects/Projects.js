@@ -30,12 +30,14 @@ const Projects = ({btn}) => {
 					</div>
 				</div>
 				<div className="row justify-content-center">
-					{projects.map((project) => (
+					{projects.slice(0, 3).map((project) => (
 						<SingleProject key={project._id} project={project}></SingleProject>
 					))}
 
 					<div className={`button text-center pt-5 ${btn === 'none' ? 'd-none' : ''}`}>
-						<Link className="custom_button m-auto">View All Projects</Link>
+						<Link to={`/portfolio`} className="custom_button m-auto">
+							View All Projects
+						</Link>
 					</div>
 				</div>
 			</div>
