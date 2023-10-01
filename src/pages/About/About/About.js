@@ -13,7 +13,7 @@ const About = () => {
 		<div>
 			<BreadCumb data={'About Me'}> </BreadCumb>
 			<AboutMe></AboutMe>
-			<Biography></Biography>
+			{/* <Biography></Biography> */}
 			<Testimonial></Testimonial>
 		</div>
 	);

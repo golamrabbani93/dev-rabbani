@@ -1,7 +1,7 @@
 @import '../../../sass/_variables';
 .brand {
 	padding: 15rem 0;
-	background-color: #ddd;
+	background-color: #000;
 	text-align: center;
 	text-align: -webkit-center;
 }
@@ -28,7 +28,7 @@
 }
 .single-brand:hover {
 	box-shadow: $shadow;
-	transform: scale(1.1);
-	filter: brightness(0.15);
+	transform: scale(2);
+	filter: brightness(15);
 	border: none;
 }

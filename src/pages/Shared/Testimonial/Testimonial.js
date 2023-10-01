@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import './Testimonial.scss';
 import {useQuery} from '@tanstack/react-query';
 import SingleTestimonial from './SingleTestimonial';
-
+import {motion} from 'framer-motion';
 const Testimonial = () => {
 	// *Load API
 	const {data: testimonials = []} = useQuery({
@@ -30,7 +30,12 @@ const Testimonial = () => {
 	};
 	return (
 		<section className="testimonial" style={testimonialBg}>
-			<div className="container">
+			<motion.div
+				initial={{scale: 0}}
+				whileInView={{scale: 1}}
+				transition={{duration: 0.6}}
+				className="container"
+			>
 				<div className="row">
 					<Slider {...settings} className="">
 						{testimonials.map((testimonial) => (
@@ -41,7 +46,7 @@ const Testimonial = () => {
 						))}
 					</Slider>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 };

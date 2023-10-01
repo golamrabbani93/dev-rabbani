@@ -11,6 +11,7 @@ import {
 	FaPhoneAlt,
 	FaTwitter,
 } from 'react-icons/fa';
+import {motion} from 'framer-motion';
 const Footer = () => {
 	return (
 		<footer className="footer">
@@ -18,7 +19,12 @@ const Footer = () => {
 				<div className="container">
 					<div className="row text-center">
 						<div className="col-lg-4 col-md-6">
-							<div className="single-footer">
+							<motion.div
+								initial={{x: -200, opacity: 0}}
+								whileInView={{x: 0, opacity: 1}}
+								transition={{duration: 0.6}}
+								className="single-footer"
+							>
 								<h4>quick links</h4>
 								<div className="head-animation">
 									<div className="post-heading"></div>
@@ -40,9 +46,14 @@ const Footer = () => {
 										<Link>Contact Us</Link>
 									</li>
 								</ul>
-							</div>
+							</motion.div>
 						</div>
-						<div className="col-lg-4 col-md-6">
+						<motion.div
+							initial={{y: -200, opacity: 0}}
+							whileInView={{y: 0, opacity: 1}}
+							transition={{duration: 0.6}}
+							className="col-lg-4 col-md-6"
+						>
 							<div className="single-footer contact-us">
 								<h4>Contact Us</h4>
 								<div className="head-animation">
@@ -70,9 +81,14 @@ const Footer = () => {
 									</li>
 								</ul>
 							</div>
-						</div>
+						</motion.div>
 						<div className="col-lg-4 col-md-6">
-							<div className="single-footer newsletter">
+							<motion.div
+								initial={{x: 200, opacity: 0}}
+								whileInView={{x: 0, opacity: 1}}
+								transition={{duration: 0.6}}
+								className="single-footer newsletter"
+							>
 								<h4>newslatter</h4>
 								<div className="head-animation">
 									<div className="post-heading"></div>
@@ -81,14 +97,19 @@ const Footer = () => {
 									<input type="email" className="form-control" placeholder="E-mail" />
 									<button type="submit">Subscribe</button>
 								</form>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="footer__bottom text-center text-lg-start">
 				<div className="container-fluid">
-					<div className="row">
+					<motion.div
+						initial={{y: -200, opacity: 0}}
+						whileInView={{y: 0, opacity: 1}}
+						transition={{duration: 0.6}}
+						className="row"
+					>
 						<div className="col-lg-4">
 							<div className="footer__bottom--logo">
 								<Link>
@@ -129,7 +150,7 @@ const Footer = () => {
 								webrabbani. All Rights Reserved.
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</footer>

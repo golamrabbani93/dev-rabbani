@@ -3,6 +3,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import './Brand.scss';
 import SingleBrand from './SingleBrand';
+import {motion} from 'framer-motion';
 const Brand = () => {
 	var settings = {
 		dots: false,
@@ -52,7 +53,12 @@ const Brand = () => {
 	});
 	return (
 		<section className="brand">
-			<div className="container">
+			<motion.div
+				initial={{scale: 0}}
+				whileInView={{scale: 1}}
+				transition={{duration: 0.6}}
+				className="container"
+			>
 				<div className="row ">
 					<Slider {...settings}>
 						{brands.map((brand) => (
@@ -60,7 +66,7 @@ const Brand = () => {
 						))}
 					</Slider>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 };
