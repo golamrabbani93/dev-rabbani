@@ -8,7 +8,7 @@ const Projects = ({btn}) => {
 	const {data: projects = [], isLoading} = useQuery({
 		queryKey: [],
 		queryFn: async () => {
-			const res = await fetch('https://webrabbani-server.vercel.app/projects');
+			const res = await fetch('https://webrabbani-server.vercel.app/projects?count=fast3');
 			const data = await res.json();
 			return data;
 		},

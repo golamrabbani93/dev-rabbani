@@ -10,8 +10,7 @@ const PortFolio = () => {
 		window.scrollTo(0, 0);
 	}, []);
 	const btnTexts = ['all', 'dynamic', 'static', 'games'];
-	const [active, setActive] = useState(0);
-
+	const [active, setActive] = useState('all');
 	const [projects, setProjects] = useState([]);
 	const [filterProjects, SetFilterProjects] = useState([]);
 	// !Load projects from Database
@@ -28,8 +27,8 @@ const PortFolio = () => {
 
 	// !Handle Filter
 	const handelFilter = (e, index) => {
-		setActive(index);
 		const btnValue = e.target.innerText;
+		setActive(btnValue);
 		if (btnValue === 'all') {
 			SetFilterProjects(projects);
 			return;
@@ -56,7 +55,7 @@ const PortFolio = () => {
 									key={index}
 									onClick={(e) => handelFilter(e, index)}
 									data-filter={btn === 'all' ? '*' : btn}
-									className={`btn ${index === active && 'active'}`}
+									className={`btn ${btn === active && 'active'}`}
 								>
 									{btn}
 								</button>

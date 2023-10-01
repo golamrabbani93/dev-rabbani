@@ -4,6 +4,8 @@
 .about {
 	padding: 10rem 0;
 	position: relative;
+	background-color: #000000;
+	color: #fff;
 	&__text {
 		position: relative;
 		@include mobile-m {

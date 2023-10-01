@@ -23,7 +23,7 @@ const Services = ({btn}) => {
 				<div className="row">
 					<div className="services__top text-center">
 						<p className="services__top--sub">services</p>
-						<h3 className="services__top--main">what we do</h3>
+						<h3 className="services__top--main">what I do</h3>
 						<div className="head-animation">
 							<div className="post-heading"></div>
 						</div>

@@ -8,6 +8,7 @@
 	transition: 2s;
 	background-position: 100% 100%;
 	background-size: cover;
+	background-color: #000000;
 	@include mobile-m {
 		/*320px-375px*/
 		height: auto;
@@ -25,9 +26,6 @@
 		height: auto;
 	}
 
-	&:hover {
-		background-color: #faf3f3;
-	}
 	&__top {
 		position: relative;
 		&--sub {
@@ -50,6 +48,7 @@
 		&--main {
 			font-size: 4rem;
 			font-family: $font-bebas;
+			color: $color-white;
 			@include mobile-m {
 				/*320px-375px*/
 				font-size: 5rem;
@@ -68,6 +67,7 @@
 		background-color: $color-white;
 		transition: all 0.3s ease;
 		margin-bottom: 3rem;
+		border-radius: 1.2rem;
 		@include mobile-m {
 			/*320px-375px*/
 			margin: 3rem;

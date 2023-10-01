@@ -5,6 +5,8 @@
 	padding: 10rem 0;
 	transition: 2s;
 	overflow-y: hidden;
+	background: #000000;
+	color: #fff;
 	@include desktop {
 		/*min-width: 1201px*/
 		.col-xl-4 {
@@ -29,15 +31,13 @@
 			transition: $transition;
 			padding: 0.4rem 2rem;
 			margin-right: 0.6rem;
+			color: $color-white;
 
 			&:hover {
 				background-color: $color-primary;
 				color: $color-white;
 			}
 		}
-	}
-	&:hover {
-		background-color: $section-hover;
 	}
 	&__text {
 		position: relative;
@@ -73,6 +73,7 @@
 			background-size: cover;
 			background-position: top;
 			transition: background-position 2.8s;
+			border-radius: 1.2rem;
 			@include mobile-m {
 				/*320px-374px*/
 				width: 56rem;

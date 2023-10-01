@@ -116,15 +116,14 @@
 						svg {
 							padding: 0 1rem;
 							font-size: 1.5rem;
-							margin-right: 0.3rem;
+							margin: 0 1.5rem;
 							transition: all 0.8s ease;
-							background: $footer-top;
-							width: 3.6rem;
-							height: 3.6rem;
+							background: #121212;
+							width: 4.6rem;
+							height: 4.6rem;
 							line-height: 3.5rem;
-							border-radius: 0;
 							color: #fff;
-							border-radius: 50%;
+							border-radius: 40%;
 
 							&:hover {
 								background-color: $color-primary;
