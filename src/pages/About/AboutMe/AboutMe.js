@@ -2,18 +2,28 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import CountUp from 'react-countup';
 import './AboutMe.scss';
-
+import {motion} from 'framer-motion';
 const AboutMe = () => {
 	return (
 		<div className="aboutMe">
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-6 col-12">
+					<motion.div
+						initial={{x: -250, opacity: 0}}
+						whileInView={{x: 0, opacity: 1}}
+						transition={{duration: 0.6}}
+						className="col-lg-6 col-12"
+					>
 						<div className="aboutMe__image">
 							<img src="https://i.ibb.co/6Z6fsTW/My-photo.png" alt="" />
 						</div>
-					</div>
-					<div className="col-lg-6 col-12">
+					</motion.div>
+					<motion.div
+						initial={{x: 250, opacity: 0}}
+						whileInView={{x: 0, opacity: 1}}
+						transition={{duration: 0.6}}
+						className="col-lg-6 col-12"
+					>
 						<div className="aboutMe__content">
 							<div className="aboutMe__content--text">
 								<h4 className="sub">Web developer</h4>
@@ -45,19 +55,19 @@ const AboutMe = () => {
 							<div className="aboutMe__content--counter">
 								<div className="projects">
 									<h3 className="number">
-										<CountUp end={25} duration={2} enableScrollSpy={true} />
+										<CountUp end={25} duration={2} enableScrollSpy={true} />+
 									</h3>
 									<p>Projects Done</p>
 								</div>
 								<div className="clients">
 									<h3 className="number">
-										<CountUp end={15} duration={2} enableScrollSpy={true} />
+										<CountUp end={3} duration={1} enableScrollSpy={true} />+
 									</h3>
 									<p>Happy Clients</p>
 								</div>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

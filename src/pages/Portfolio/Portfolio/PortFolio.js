@@ -49,7 +49,13 @@ const PortFolio = () => {
 			<div className="portfolio">
 				<div className="container">
 					<div className="row">
-						<div className="btn-group filter">
+						<motion.div
+							initial={{scale: 0, opacity: 0}}
+							whileInView={{scale: 1, opacity: 1}}
+							transition={{delay: 0.3, duration: 0.4}}
+							viewport={{once: true}}
+							className="btn-group filter"
+						>
 							{btnTexts.map((btn, index) => (
 								<button
 									key={index}
@@ -60,21 +66,15 @@ const PortFolio = () => {
 									{btn}
 								</button>
 							))}
-							{/* <button data-filter="*" class="btn active">
-								all
-							</button>
-							<button class="btn" data-filter=".front">
-								front-end
-							</button>
-							<button class="btn" data-filter=".BE">
-								Back-End
-							</button>
-							<button class="btn" data-filter=".WP">
-								WordPress
-							</button> */}
-						</div>
+						</motion.div>
 					</div>
-					<motion.div layout className="row justify-content-center grid">
+					<motion.div
+						layout
+						initial={{y: -200, opacity: 0}}
+						whileInView={{y: 0, opacity: 1}}
+						transition={{duration: 0.6}}
+						className="row justify-content-center grid"
+					>
 						{filterProjects.map((project) => (
 							<SingleProject key={project._id} project={project}></SingleProject>
 						))}

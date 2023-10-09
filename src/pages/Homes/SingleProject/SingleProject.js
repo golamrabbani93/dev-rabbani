@@ -74,24 +74,26 @@ const SingleProject = () => {
 									rel="noopener noreferrer"
 									style={{marginTop: '-20px'}}
 								>
-									Github Client Side
+									{github_link[0]?.server_side ? 'Github Client Side' : 'Github'}
 								</a>
 							</span>
 						</div>
-						<div className="github server">
-							<span className="link-icon">
-								<HiOutlineExternalLink />
-								<a
-									href={github_link[0].server_side}
-									className="title"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{marginTop: '-20px'}}
-								>
-									Github Server Side
-								</a>
-							</span>
-						</div>
+						{github_link[0]?.server_side && (
+							<div className="github server">
+								<span className="link-icon">
+									<HiOutlineExternalLink />
+									<a
+										href={github_link[0].server_side}
+										className="title"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{marginTop: '-20px'}}
+									>
+										Github Server Side
+									</a>
+								</span>
+							</div>
+						)}
 					</div>
 					<div className="project_details py-5">
 						<div className="project_details--technology">
