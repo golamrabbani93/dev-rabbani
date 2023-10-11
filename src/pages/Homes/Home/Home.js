@@ -4,8 +4,10 @@ import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Projects from '../Projects/Projects';
 import Services from '../Services/Services';
+import UseTitle from '../../../hooks/UseTitle';
 
 const Home = () => {
+	UseTitle('Home || Webrabbani');
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);

@@ -1,6 +1,5 @@
-import {useQuery} from '@tanstack/react-query';
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useLocation, useParams} from 'react-router-dom';
 import {PhotoProvider, PhotoView} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import './SingleProject.scss';
@@ -8,8 +7,13 @@ import {useEffect} from 'react';
 import Loader from '../../Shared/Loader/Loader';
 import {motion} from 'framer-motion';
 import {HiOutlineExternalLink} from 'react-icons/hi';
+import {useQuery} from '@tanstack/react-query';
+import UseTitle from '../../../hooks/UseTitle';
 const SingleProject = () => {
 	const id = useParams();
+	const {search} = useLocation();
+	const title = search.split('=')[1];
+	UseTitle(`${title} || Portfolio`);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -131,6 +135,7 @@ const SingleProject = () => {
 								{allFeauters?.map((item, index) => {
 									return (
 										<motion.div
+											key={index}
 											initial={{y: 200, opacity: 0, scale: 0}}
 											whileInView={{y: 0, opacity: 1, scale: 1}}
 											transition={{duration: 0.6}}

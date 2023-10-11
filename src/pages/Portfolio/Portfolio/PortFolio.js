@@ -5,7 +5,9 @@ import {useQuery} from '@tanstack/react-query';
 import SingleProject from '../../Homes/Projects/SingleProject';
 import {useState} from 'react';
 import {motion} from 'framer-motion';
+import UseTitle from '../../../hooks/UseTitle';
 const PortFolio = () => {
+	UseTitle('Portfolio || Webrabbani');
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -14,14 +16,13 @@ const PortFolio = () => {
 	const [projects, setProjects] = useState([]);
 	const [filterProjects, SetFilterProjects] = useState([]);
 	// !Load projects from Database
-	const {data, isLoading} = useQuery({
+	useQuery({
 		queryKey: [],
 		queryFn: async () => {
 			const res = await fetch('https://webrabbani-server.vercel.app/projects');
 			const data = await res.json();
 			setProjects(data);
 			SetFilterProjects(data);
-			return data;
 		},
 	});
 
@@ -36,7 +37,7 @@ const PortFolio = () => {
 		const filterdItems = projects.filter((project) => project.filter.includes(btnValue));
 		SetFilterProjects(filterdItems);
 	};
-	if (isLoading) {
+	if (filterProjects.length === 0) {
 		return <Loader></Loader>;
 	}
 	return (

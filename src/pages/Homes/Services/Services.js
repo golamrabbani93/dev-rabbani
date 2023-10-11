@@ -5,7 +5,10 @@ import SingleServices from './SingleServices';
 import Bg from '../../../images/banner/banner-service.png';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import UseTitle from '../../../hooks/UseTitle';
 const Services = ({btn}) => {
+	UseTitle('Services || Webrabbani');
+
 	const {data: services = []} = useQuery({
 		queryKey: ['services'],
 		queryFn: async () => {

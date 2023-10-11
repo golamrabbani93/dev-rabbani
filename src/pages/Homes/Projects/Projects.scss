@@ -45,29 +45,10 @@
 
 	&__items {
 		padding-top: 7rem;
-		@include mobile-m {
-			/*320px-374px*/
-			padding-left: 5rem !important;
-		}
-		@include mobile-s {
-			/*375px-424px*/
-			padding-left: 4rem !important;
-		}
-		@include mobile-l {
-			/*425px-480px*/
-			padding-left: 5rem !important;
-		}
-		@include mobile-port {
-			/*481px-767px*/
-			padding-left: 6rem !important;
-		}
-		@include tablet {
-			/*768px-1024px*/
-			padding-left: 8rem !important;
-		}
 		.item {
 			width: 35rem;
 			height: 34rem;
+			margin: 0 auto;
 			overflow: hidden;
 			position: relative;
 			background-size: cover;

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 const SingleProject = ({project}) => {
@@ -16,7 +16,7 @@ const SingleProject = ({project}) => {
 				<div className="item--text">
 					<div className="text-inner">
 						<p>
-							<Link to={`/project/${_id}`} className="title">
+							<Link to={`/project/${_id}?name=${name}`} className="title">
 								{name} <small>Details</small>
 							</Link>
 							<a
