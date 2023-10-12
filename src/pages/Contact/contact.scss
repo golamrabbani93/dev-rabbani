@@ -1,0 +1,91 @@
+@import '../../sass/variables';
+.contact {
+	padding: 10rem 0;
+	&--bottom {
+		.information {
+			// width: 40rem;
+			margin: 3rem auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			.call {
+				font-family: $font-bebas;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 1rem;
+				margin-top: 2rem;
+				p {
+					font-size: 2rem;
+				}
+				.icon {
+					svg {
+						margin-right: 2rem;
+						height: 5rem;
+						width: 5rem;
+					}
+				}
+				.text > p {
+					margin-bottom: 2px;
+				}
+			}
+		}
+	}
+	&--form {
+		margin-top: 5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		.input-left {
+			height: 10rem;
+			input {
+				height: 5rem;
+				width: 35rem;
+				margin-bottom: 1rem;
+				font-size: 2rem;
+				padding: 0 0.5rem;
+				border-radius: 1rem;
+			}
+			p {
+				font-size: 1.3rem;
+				margin-top: 1.5rem;
+				color: white;
+				font-family: $font-sora;
+			}
+		}
+		.input-right {
+			textarea {
+				height: 11rem;
+				width: 35rem;
+				font-size: 2rem;
+				border-radius: 1rem;
+				padding: 0 0.5rem;
+				margin-bottom: 1.5rem;
+			}
+			.text-right {
+				text-align: right;
+				button {
+					position: relative;
+					right: 0;
+					top: 0;
+					text-decoration: none;
+					border-radius: 1rem;
+					outline: none !important;
+					box-shadow: none;
+					display: inline-block;
+					text-align: center;
+					padding: 0rem 2rem;
+					font-size: 2rem;
+					background: $color-primary;
+					color: $color-white;
+					border: 0.2rem solid $color-primary;
+					transition: 0.3s ease-in-out;
+					font-family: $font-bebas;
+					&:hover {
+						color: rgba(0, 0, 0, 0.904);
+					}
+				}
+			}
+		}
+	}
+}

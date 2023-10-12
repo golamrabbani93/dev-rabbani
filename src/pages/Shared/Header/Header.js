@@ -56,6 +56,11 @@ const Header = () => {
 										PortFolio
 									</NavLink>
 								</li>
+								<li>
+									<NavLink to="/contact" onClick={() => setHamOpen(!hamOpen)}>
+										Contact
+									</NavLink>
+								</li>
 							</ul>
 						</nav>
 					</div>

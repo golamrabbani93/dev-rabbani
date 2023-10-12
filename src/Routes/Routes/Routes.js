@@ -5,6 +5,7 @@ import Home from '../../pages/Homes/Home/Home';
 import SingleProject from '../../pages/Homes/SingleProject/SingleProject';
 import PortFolio from '../../pages/Portfolio/Portfolio/PortFolio';
 import ServicesPage from '../../pages/Services/ServicesPage';
+import Contact from '../../pages/Contact/Contact';
 
 export const router = createBrowserRouter([
 	{
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/portfolio',
 				element: <PortFolio></PortFolio>,
+			},
+			{
+				path: '/Contact',
+				element: <Contact></Contact>,
 			},
 		],
 	},
