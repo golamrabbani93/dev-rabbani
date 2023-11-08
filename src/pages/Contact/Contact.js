@@ -6,7 +6,6 @@ import {ImLocation2} from 'react-icons/im';
 import {AiFillMail} from 'react-icons/ai';
 import './contact.scss';
 import UseTitle from '../../hooks/UseTitle';
-import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 const Contact = () => {
 	UseTitle('Contact || Webrabbani');

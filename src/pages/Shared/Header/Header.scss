@@ -77,13 +77,13 @@
 		justify-content: space-between;
 		background: #000;
 		height: 109vh;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		opacity: 0;
 		visibility: hidden;
-		transition: 1s;
+		transition: all 0.5s ease-in-out;
 		z-index: 2;
 
 		.menu ul {
@@ -131,6 +131,5 @@
 		/* purgecss ignore current */
 		opacity: 1;
 		visibility: visible;
-		position: fixed;
 	}
 }
