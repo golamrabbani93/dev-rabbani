@@ -112,6 +112,22 @@
 					&:hover {
 						color: $color-primary;
 					}
+					@include tablet {
+						/*768px-1024px*/
+						font-size: 8rem;
+						line-height: 9rem;
+					}
+
+					@include tablet-port {
+						/*1025px-1200px*/
+						font-size: 10rem;
+						line-height: 10rem;
+					}
+					@include mini-desktop {
+						/*1201px-1300px*/
+						font-size: 10rem;
+						line-height: 11rem;
+					}
 				}
 			}
 		}
