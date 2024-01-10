@@ -59,7 +59,7 @@ const Brand = () => {
 				transition={{duration: 0.6}}
 				className="container"
 			>
-				<div className="row ">
+				<div className="row">
 					<Slider {...settings}>
 						{brands.map((brand) => (
 							<SingleBrand key={brand._id} brand={brand}></SingleBrand>
