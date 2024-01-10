@@ -44,7 +44,13 @@
 				margin-bottom: 1rem;
 				font-size: 2rem;
 				padding: 0 0.5rem;
-				border-radius: 1rem;
+
+				&:active,
+				&:focus {
+					box-shadow: none !important;
+					outline: none;
+					border: 2px solid $color-primary;
+				}
 			}
 			p {
 				font-size: 1.3rem;
@@ -61,6 +67,12 @@
 				border-radius: 1rem;
 				padding: 0 0.5rem;
 				margin-bottom: 1.5rem;
+				&:active,
+				&:focus {
+					box-shadow: none !important;
+					outline: none;
+					border: 2px solid $color-primary;
+				}
 			}
 			.text-right {
 				text-align: right;

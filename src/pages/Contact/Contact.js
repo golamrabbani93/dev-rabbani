@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import BreadCumb from '../Shared/BreadCumb/BreadCumb';
 import {motion} from 'framer-motion';
 import {HiPhoneArrowUpRight} from 'react-icons/hi2';
 import {ImLocation2} from 'react-icons/im';
 import {AiFillMail} from 'react-icons/ai';
-import './contact.scss';
+import './Contact.scss';
 import UseTitle from '../../hooks/UseTitle';
-import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 const Contact = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	UseTitle('Contact || Webrabbani');
-	const {register, handleSubmit} = useForm();
+	const {register, handleSubmit, reset} = useForm();
 	const submitData = (data) => {
 		console.log(data);
 		try {
@@ -23,6 +25,7 @@ const Contact = () => {
 				.then((result) => {
 					if (result) {
 						alert('Your Message Send Successfully');
+						reset();
 					}
 				});
 		} catch (error) {
@@ -87,7 +90,7 @@ const Contact = () => {
 						<input {...register('name')} required={true} type="text" placeholder="Name" />
 						<br />
 						<input {...register('email')} required={true} type="email" placeholder="Email" />
-						<p>All Fields Are Required</p>
+						<p>All Fields Are Required**</p>
 					</div>
 					<div className="input-right">
 						<textarea
