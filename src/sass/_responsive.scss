@@ -28,8 +28,13 @@
 		@content;
 	}
 }
+@mixin mini-desktop {
+	@media (min-width: 1201px) and (max-width: 1300px) {
+		@content;
+	}
+}
 @mixin desktop {
-	@media (min-width: 1201px) {
+	@media (min-width: 1301px) {
 		@content;
 	}
 }

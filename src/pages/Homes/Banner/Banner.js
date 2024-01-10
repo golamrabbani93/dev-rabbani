@@ -35,7 +35,7 @@ const Banner = () => {
 						<motion.a
 							animate={{y: [50, 0], opacity: [0, 1]}}
 							transition={{delay: 1, duration: 0.2}}
-							href="https://drive.google.com/file/d/1oxdlyk0f3CHNwjvDxV6sXLu2WXMyPiIW/view?usp=sharing"
+							href="https://drive.google.com/file/d/1Ylj7u6tyoVKY-nIW_5bnoFrJGrybY86h/view?usp=sharing"
 							className=" custom_button"
 							target="_blank"
 							rel="noopener noreferrer"
