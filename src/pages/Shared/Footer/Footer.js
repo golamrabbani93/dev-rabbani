@@ -17,7 +17,7 @@ const Footer = () => {
 		<footer className="footer">
 			<div className="footer__top">
 				<div className="container">
-					<div className="row text-center">
+					<div className="row">
 						<div className="col-lg-4 col-md-6">
 							<motion.div
 								initial={{x: -200, opacity: 0}}
@@ -31,19 +31,20 @@ const Footer = () => {
 								</div>
 								<ul>
 									<li>
-										<Link>Home</Link>
+										<Link to={'/'}>Home</Link>
 									</li>
 									<li>
-										<Link>About Us</Link>
+										<Link to={'/about'}>About Us</Link>
+									</li>
+
+									<li>
+										<Link to={'/services'}>Our Services</Link>
 									</li>
 									<li>
-										<Link>Our Services</Link>
+										<Link to={'/portfolio'}>Portfolio</Link>
 									</li>
 									<li>
-										<Link>Gallery</Link>
-									</li>
-									<li>
-										<Link>Contact Us</Link>
+										<Link to={'/Contact'}>Contact Us</Link>
 									</li>
 								</ul>
 							</motion.div>
@@ -76,7 +77,7 @@ const Footer = () => {
 									<li>
 										<Link>
 											<FaLink />
-											webrabbani.com
+											webrabbani.web.app/
 										</Link>
 									</li>
 								</ul>

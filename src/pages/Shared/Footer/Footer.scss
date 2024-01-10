@@ -15,6 +15,11 @@
 			}
 			.head-animation {
 				top: -3rem;
+				.post-heading {
+					position: absolute;
+					top: 0%;
+					left: 12%;
+				}
 			}
 			ul {
 				list-style: none;
@@ -55,7 +60,7 @@
 				.form-control {
 					width: 35rem;
 					height: 5rem;
-					margin: 7rem auto 2rem auto;
+					margin: 5rem auto 3rem 0;
 					font-size: 1.3rem;
 					&:active,
 					&:focus {
