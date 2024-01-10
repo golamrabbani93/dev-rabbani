@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
 				element: <PortFolio></PortFolio>,
 			},
 			{
-				path: '/Contact',
+				path: '/contact',
 				element: <Contact></Contact>,
 			},
 		],

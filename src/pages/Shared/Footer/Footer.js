@@ -44,7 +44,7 @@ const Footer = () => {
 										<Link to={'/portfolio'}>Portfolio</Link>
 									</li>
 									<li>
-										<Link to={'/Contact'}>Contact Us</Link>
+										<Link to={'/contact'}>Contact Us</Link>
 									</li>
 								</ul>
 							</motion.div>
@@ -77,7 +77,7 @@ const Footer = () => {
 									<li>
 										<Link>
 											<FaLink />
-											webrabbani.web.app/
+											https://webrabbani.web.app/
 										</Link>
 									</li>
 								</ul>
@@ -113,7 +113,7 @@ const Footer = () => {
 					>
 						<div className="col-lg-4">
 							<div className="footer__bottom--logo">
-								<Link>
+								<Link to={`/`}>
 									<img src={logo} alt="" />
 								</Link>
 							</div>
@@ -122,24 +122,24 @@ const Footer = () => {
 							<div className="footer__bottom--social">
 								<ul>
 									<li>
-										<Link>
+										<a href={`https://www.facebook.com/golam.rabbani.72`} target="_blank">
 											<FaFacebook />
-										</Link>
+										</a>
 									</li>
 									<li>
-										<Link>
+										<a href={`https://www.linkedin.com/in/g-rabbani/`} target="_blank">
 											<FaLinkedin />
-										</Link>
+										</a>
 									</li>
 									<li>
-										<Link>
+										<a href={`https://www.facebook.com/golam.rabbani.72`} target="_blank">
 											<FaTwitter />
-										</Link>
+										</a>
 									</li>
 									<li>
-										<Link>
+										<a href={`https://github.com/golamrabbani93`} target="_blank">
 											<FaGithub />
-										</Link>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -147,7 +147,7 @@ const Footer = () => {
 						<div className="col-lg-4">
 							<div className="footer__bottom--copyright">
 								&copy;
-								<script>document.write(new Date().getFullYear());</script>
+								{` ${new Date().getFullYear()} `}
 								webrabbani. All Rights Reserved.
 							</div>
 						</div>
