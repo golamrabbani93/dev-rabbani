@@ -16,13 +16,14 @@ const PortFolio = () => {
 	const [projects, setProjects] = useState([]);
 	const [filterProjects, SetFilterProjects] = useState([]);
 	// !Load projects from Database
-	useQuery({
+	const {} = useQuery({
 		queryKey: [],
 		queryFn: async () => {
 			const res = await fetch('https://webrabbani-server.vercel.app/projects');
 			const data = await res.json();
 			setProjects(data);
 			SetFilterProjects(data);
+			return data;
 		},
 	});
 
