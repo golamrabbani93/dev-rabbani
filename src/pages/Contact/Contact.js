@@ -15,22 +15,6 @@ const Contact = () => {
 	const {register, handleSubmit, reset} = useForm();
 	const submitData = (data) => {
 		console.log(data);
-		try {
-			fetch('https://webrabbani-server.vercel.app/addMessage', {
-				method: 'POST',
-				headers: {'Content-Type': 'application/json'},
-				body: JSON.stringify(data),
-			})
-				.then((res) => res.json())
-				.then((result) => {
-					if (result) {
-						alert('Your Message Send Successfully');
-						reset();
-					}
-				});
-		} catch (error) {
-			alert('Your Message Send Successfully');
-		}
 	};
 	return (
 		<div>

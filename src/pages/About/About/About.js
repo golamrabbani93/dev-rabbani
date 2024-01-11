@@ -3,7 +3,6 @@ import {useEffect} from 'react';
 import BreadCumb from '../../Shared/BreadCumb/BreadCumb';
 import Testimonial from '../../Shared/Testimonial/Testimonial';
 import AboutMe from '../AboutMe/AboutMe';
-import Biography from '../Biography/Biography';
 import UseTitle from '../../../hooks/UseTitle';
 
 const About = () => {
@@ -15,7 +14,6 @@ const About = () => {
 		<div>
 			<BreadCumb data={'About Me'}> </BreadCumb>
 			<AboutMe></AboutMe>
-			{/* <Biography></Biography> */}
 			<Testimonial></Testimonial>
 		</div>
 	);
