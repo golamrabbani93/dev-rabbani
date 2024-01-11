@@ -10,17 +10,16 @@ import {HiOutlineExternalLink} from 'react-icons/hi';
 import {useQuery} from '@tanstack/react-query';
 import UseTitle from '../../../hooks/UseTitle';
 const SingleProject = () => {
-	const id = useParams();
-	const {search} = useLocation();
-	const title = search.split('=')[1];
+	const params = useParams();
+	const title = params?.name.replace(/-/g, ' ');
 	UseTitle(`${title} || Portfolio`);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 	const {data: project = [], isLoading} = useQuery({
-		queryKey: [id.id],
+		queryKey: [params?.id],
 		queryFn: async () => {
-			const res = await fetch(`https://webrabbani-server.vercel.app/project/${id.id}`);
+			const res = await fetch(`https://webrabbani-server.vercel.app/project/${params?.id}`);
 			const data = await res.json();
 			return data;
 		},
