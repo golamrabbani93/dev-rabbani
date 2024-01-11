@@ -16,7 +16,7 @@ const SingleProject = ({project}) => {
 				<div className="item--text">
 					<div className="text-inner">
 						<p>
-							<Link to={`/project/${_id}?name=${name}`} className="title">
+							<Link to={`/project/${name.toLowerCase()}/${_id}`} className="title">
 								{name} <small>Details</small>
 							</Link>
 							<a
