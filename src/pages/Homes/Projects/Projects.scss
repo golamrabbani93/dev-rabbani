@@ -202,6 +202,21 @@
 					}
 				}
 			}
+			.ongoing {
+				position: absolute;
+				z-index: 2;
+				top: 2rem;
+				left: -4px;
+				transform: rotate(-45deg);
+				p {
+					padding: 0.5rem 1rem;
+					border: 2px solid $color-primary;
+					font-size: 1.5rem;
+					text-transform: uppercase;
+					font-weight: 700;
+					border-radius: 50%;
+				}
+			}
 		}
 	}
 	.button {

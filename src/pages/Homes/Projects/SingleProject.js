@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 const SingleProject = ({project}) => {
-	const {_id, name, image, live_link} = project;
+	const {_id, name, image, live_link, status} = project;
 	return (
 		<motion.div
 			layout
@@ -32,6 +32,11 @@ const SingleProject = ({project}) => {
 						</p>
 					</div>
 				</div>
+				{status && (
+					<div className="ongoing">
+						<p>Ongoing</p>
+					</div>
+				)}
 			</div>
 		</motion.div>
 	);
