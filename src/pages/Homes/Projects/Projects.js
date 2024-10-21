@@ -5,6 +5,7 @@ import './Projects.scss';
 import SingleProject from './SingleProject';
 import Loader from '../../Shared/Loader/Loader';
 import {motion} from 'framer-motion';
+import {useGetAllProjectQuery} from '../../../redux/features/project/project.management';
 const Projects = ({btn}) => {
 	const {data: projects = [], isLoading} = useQuery({
 		queryKey: [],
@@ -14,6 +15,7 @@ const Projects = ({btn}) => {
 			return data;
 		},
 	});
+
 	if (isLoading) {
 		return <Loader></Loader>;
 	}
