@@ -6,6 +6,8 @@ import SingleProject from '../../pages/Homes/SingleProject/SingleProject';
 import PortFolio from '../../pages/Portfolio/Portfolio/PortFolio';
 import ServicesPage from '../../pages/Services/ServicesPage';
 import Contact from '../../pages/Contact/Contact';
+import ProtectedRoute from '../ProtectedRoutes/ProtectedRoutes';
+import Login from '../../pages/Shared/Register/Login/Login';
 
 export const router = createBrowserRouter([
 	{
@@ -37,5 +39,17 @@ export const router = createBrowserRouter([
 				element: <Contact></Contact>,
 			},
 		],
+	},
+	{
+		path: '/dashboard',
+		element: (
+			<ProtectedRoute role={'ADMIN'}>
+				<h2>Admin Dashboard</h2>
+			</ProtectedRoute>
+		),
+	},
+	{
+		path: '/login',
+		element: <Login />,
 	},
 ]);
