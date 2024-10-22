@@ -1,8 +1,8 @@
 import {baseApi} from '../../api/baseApi';
 
-const projectManagementApi = baseApi.injectEndpoints({
+const technologyManagementApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
-		getAllProject: builder.query({
+		getAllTechnologies: builder.query({
 			query: (args) => {
 				const params = new URLSearchParams();
 
@@ -12,12 +12,12 @@ const projectManagementApi = baseApi.injectEndpoints({
 					});
 				}
 				return {
-					url: '/projects',
+					url: '/technologies',
 					method: 'GET',
 					params: params,
 				};
 			},
-			providesTags: ['Projects'],
+			providesTags: ['Technologies'],
 			transformResponse: (response) => {
 				const data = response?.data;
 				return {
@@ -26,15 +26,15 @@ const projectManagementApi = baseApi.injectEndpoints({
 			},
 		}),
 
-		addProject: builder.mutation({
+		addTechnology: builder.mutation({
 			query: (projectData) => ({
-				url: '/projects/create-project',
+				url: '/technologies/create-technology',
 				method: 'POST',
 				body: projectData,
 			}),
-			invalidatesTags: ['Projects'],
+			invalidatesTags: ['Technologies'],
 		}),
 	}),
 });
 
-export const {useGetAllProjectQuery, useAddProjectMutation} = projectManagementApi;
+export const {useGetAllTechnologiesQuery, useAddTechnologyMutation} = technologyManagementApi;

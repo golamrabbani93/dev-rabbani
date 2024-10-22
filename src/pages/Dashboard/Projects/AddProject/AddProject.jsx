@@ -3,17 +3,19 @@ import DevrabbaniForm from '../../../../components/Form/DevrabbaniForm';
 import DevrabbaniInput from '../../../../components/Form/DevrabbaniInput';
 import DevrabbaniUpload from '../../../../components/Form/DevrabbaniUpload';
 import {useState} from 'react';
-import DynamicDevrabbaniInput from '../../../../components/Form/DevrabbaniDynamicInput ';
 import {FormProvider, useFieldArray, useForm} from 'react-hook-form';
 import DevrabbaniSelect from '../../../../components/Form/DevrabbaniSelect';
 import {IoMdAddCircleOutline} from 'react-icons/io';
 import {FaTrash} from 'react-icons/fa';
 import {useAddProjectMutation} from '../../../../redux/features/project/project.management';
 import {toast} from 'sonner';
+import {useGetAllTechnologiesQuery} from '../../../../redux/features/technologies/technologies.management';
 const style = {
 	padding: '8px 0',
 };
 const AddProject = () => {
+	//get Technologies
+	const {data: technologies, isLoading: techLoading} = useGetAllTechnologiesQuery();
 	const [addProjectsAddProject, {data, isLoading}] = useAddProjectMutation();
 
 	const [fullPhoto, setFullPhoto] = useState([]);
@@ -31,12 +33,15 @@ const AddProject = () => {
 	};
 
 	const handleSubmitData = async (data) => {
+		if (fullPhoto.length <= 0 && images.length <= 0) {
+			toast.error('Please Select Project Photo');
+		}
 		const formData = new FormData();
 		const newData = {
 			...data,
-			technologies: ['6715453366ee46ff4fb38719'],
 			features: data.features.map((f) => f.value),
 		};
+
 		formData.append('data', JSON.stringify(newData));
 
 		for (let image of images) {
@@ -56,17 +61,18 @@ const AddProject = () => {
 		}
 	};
 
-	const projectStatusOptions = [
-		{label: 'Active', value: 'Active'},
-		{label: 'Inactive', value: 'Inactive'},
-	];
-
 	const projectFilterOptions = [
 		{label: 'Dynamic', value: 'dynamic'},
 		{label: 'Static', value: 'static'},
 		{label: 'Games', value: 'games'},
 	];
 
+	const projectTechnologiesOptions = technologies?.data?.map((tech) => {
+		return {
+			label: tech.name,
+			value: tech._id,
+		};
+	});
 	return (
 		<>
 			<h2 class className="title-header">
@@ -101,9 +107,11 @@ const AddProject = () => {
 						<div className="col-md-3">
 							<div style={style}>
 								<DevrabbaniSelect
-									name="status"
-									label="Project Status"
-									options={projectStatusOptions}
+									name="technologies"
+									label="Add Technologies"
+									options={projectTechnologiesOptions}
+									mode={'multiple'}
+									disabled={techLoading}
 								/>
 							</div>
 						</div>
