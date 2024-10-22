@@ -25,7 +25,16 @@ const projectManagementApi = baseApi.injectEndpoints({
 				};
 			},
 		}),
+
+		addProject: builder.mutation({
+			query: (projectData) => ({
+				url: '/projects/create-project',
+				method: 'POST',
+				body: projectData,
+			}),
+			invalidatesTags: ['project'],
+		}),
 	}),
 });
 
-export const {useGetAllProjectQuery} = projectManagementApi;
+export const {useGetAllProjectQuery, useAddProjectMutation} = projectManagementApi;

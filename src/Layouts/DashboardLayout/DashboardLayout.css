@@ -1,0 +1,53 @@
+.list-link {
+	list-style: none;
+	margin-left: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.list-link:hover {
+	cursor: pointer;
+	color: #e55137;
+}
+
+.title-header {
+	font-size: 3rem;
+	font-weight: bold;
+	color: #e55137;
+	text-transform: uppercase;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.button-plus {
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.button-plus:hover {
+	color: #e55137;
+}
+ul {
+	list-style: none;
+}
+
+.full-link {
+	text-decoration: none;
+	color: white;
+	transition: all 0.3s ease-in-out;
+}
+
+.full-link:hover {
+	text-decoration: none;
+	color: #e55137;
+}
+.ant-upload-list-item-actions {
+	text-align: center;
+}
+.ant-upload-list-item-actions > a {
+	display: none;
+}
+
+.ant-upload-list-item-container > .ant-tooltip > .ant-tooltip-content > .ant-tooltip-inner {
+	display: none;
+}
+.ant-upload-list-item-container > .ant-tooltip > .ant-tooltip-arrow {
+	display: none;
+}

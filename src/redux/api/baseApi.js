@@ -3,7 +3,7 @@ import {logOut, setUser} from '../features/auth/authSlice';
 import {toast} from 'sonner';
 
 const baseQuery = fetchBaseQuery({
-	baseUrl: 'https://devrabbani-backend.vercel.app/api',
+	baseUrl: 'http://localhost:5000/api',
 	prepareHeaders: (headers, {getState}) => {
 		const token = getState().auth.token;
 		if (token) {

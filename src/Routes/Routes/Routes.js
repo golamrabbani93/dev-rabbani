@@ -8,6 +8,10 @@ import ServicesPage from '../../pages/Services/ServicesPage';
 import Contact from '../../pages/Contact/Contact';
 import ProtectedRoute from '../ProtectedRoutes/ProtectedRoutes';
 import Login from '../../pages/Shared/Register/Login/Login';
+import DashboardLayout from '../../Layouts/DashboardLayout/DashboardLayout';
+import Dashboard from '../../pages/Dashboard/Dashboard/Dashboard';
+import AllProjects from '../../pages/Dashboard/Projects/AllProjetcs/AllProjects';
+import AddProject from '../../pages/Dashboard/Projects/AddProject/AddProject';
 
 export const router = createBrowserRouter([
 	{
@@ -44,9 +48,23 @@ export const router = createBrowserRouter([
 		path: '/dashboard',
 		element: (
 			<ProtectedRoute role={'ADMIN'}>
-				<h2>Admin Dashboard</h2>
+				<DashboardLayout />
 			</ProtectedRoute>
 		),
+		children: [
+			{
+				path: '/dashboard',
+				element: <Dashboard />,
+			},
+			{
+				path: '/dashboard/all-projects',
+				element: <AllProjects />,
+			},
+			{
+				path: '/dashboard/add-project',
+				element: <AddProject />,
+			},
+		],
 	},
 	{
 		path: '/login',

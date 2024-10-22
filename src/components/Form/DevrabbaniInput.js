@@ -3,7 +3,7 @@ import {Controller} from 'react-hook-form';
 
 const DevrabbaniInput = ({type, name, label, placeholder}) => {
 	return (
-		<div style={{marginBottom: '20px'}}>
+		<div style={{marginBottom: '20px', width: '100%'}}>
 			<Controller
 				name={name}
 				render={({field, fieldState: {error}}) => (
