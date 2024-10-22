@@ -6,7 +6,12 @@ const About = () => {
 	return (
 		<section className="about">
 			<div className="container">
-				<div className="row ">
+				<div
+					className="row"
+					style={{
+						alignItems: 'center',
+					}}
+				>
 					<motion.div
 						initial={{x: -300, opacity: 0}}
 						whileInView={{x: 0, opacity: 1}}
@@ -19,9 +24,10 @@ const About = () => {
 							<div className="post-heading"></div>
 						</div>
 						<p className="about__text--description">
-							Discreet web developer with over One year of front-end. Experience and a passion for
-							responsive website design. Exceptional evaluation, analysis, design, and
-							Implementation of client/server. Extremely dedicated, organised, and team-oriented.
+							Dedicated MERN Developer with over one year of front-end experience and a strong
+							passion for responsive web design. Proven expertise in the evaluation, analysis,
+							design, and implementation of client/server applications. Highly organized, committed,
+							and a collaborative team player....
 						</p>
 						<Link className="custom_button m-auto">discover more</Link>
 					</motion.div>
@@ -32,7 +38,11 @@ const About = () => {
 						className="col-md-6 col-sm-12"
 					>
 						<div className="about__image">
-							<img src="https://i.ibb.co/6Z6fsTW/My-photo.png" alt="" className="img-fluid" />
+							<img
+								src="https://res.cloudinary.com/dolttvkme/image/upload/v1729609235/my-photo_csyrh6.png"
+								alt=""
+								className="img-fluid rounded-5"
+							/>
 						</div>
 					</motion.div>
 				</div>

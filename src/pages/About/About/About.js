@@ -4,6 +4,7 @@ import BreadCumb from '../../Shared/BreadCumb/BreadCumb';
 import Testimonial from '../../Shared/Testimonial/Testimonial';
 import AboutMe from '../AboutMe/AboutMe';
 import UseTitle from '../../../hooks/UseTitle';
+import Technologies from '../Technologies/Technologies';
 
 const About = () => {
 	UseTitle('About || Webrabbani');
@@ -14,6 +15,7 @@ const About = () => {
 		<div>
 			<BreadCumb data={'About Me'}> </BreadCumb>
 			<AboutMe></AboutMe>
+			<Technologies />
 			<Testimonial></Testimonial>
 		</div>
 	);

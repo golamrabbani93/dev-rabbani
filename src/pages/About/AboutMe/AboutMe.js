@@ -15,7 +15,11 @@ const AboutMe = () => {
 						className="col-lg-6 col-12"
 					>
 						<div className="aboutMe__image">
-							<img src="https://i.ibb.co/6Z6fsTW/My-photo.png" alt="" />
+							<img
+								src="https://res.cloudinary.com/dolttvkme/image/upload/v1729609235/my-photo_csyrh6.png"
+								alt=""
+								className="img-fluid rounded-5"
+							/>
 						</div>
 					</motion.div>
 					<motion.div
@@ -32,10 +36,10 @@ const AboutMe = () => {
 									<div className="post-heading"></div>
 								</div>
 								<p className="description">
-									A Web Developer specializing in both front-end back-end development. Experienced
-									with all stages of the development cycle for dynamic web projects. Well- versed in
-									numerous programming languages including HTML5, PHP, JavaScript, CSS. I am also
-									experience on WordPress and Woocommerce.
+									Dedicated MERN Developer with over one year of front-end experience and a strong
+									passion for responsive web design. Proven expertise in the evaluation, analysis,
+									design, and implementation of client/server applications. Highly organized,
+									committed, and a collaborative team player.....
 								</p>
 							</div>
 							<div className="aboutMe__content--contact ">

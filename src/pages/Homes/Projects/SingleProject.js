@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 const SingleProject = ({project}) => {
 	const {_id, name, fullPhoto, liveLink, status, currentProject} = project;
-	console.log('🚀🚀: SingleProject -> fullPhoto', fullPhoto);
 
 	return (
 		<motion.div

@@ -136,7 +136,7 @@ const SingleProject = () => {
 					)}
 					<div className="project_details py-5">
 						<div className="project_details--technology">
-							<h2 className="text-white">Technology Used In This Project</h2>
+							<h2 className="text-white">Technologies Used In This Project</h2>
 
 							<div className="technology row justify-content-center align-items-center">
 								{technologies?.map((item, index) => (
@@ -165,7 +165,7 @@ const SingleProject = () => {
 							</div>
 						</div>
 						<div className="project_details--feature">
-							<h2 className="text-white">What Features In This Project</h2>
+							<h2 className="text-white">What's Features In This Project</h2>
 							<div className="row justify-content-center align-items-center">
 								{features?.map((item, index) => {
 									return (
