@@ -2,7 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 const SingleProject = ({project}) => {
-	const {_id, name, image, live_link, status} = project;
+	const {_id, name, fullPhoto, liveLink, status, currentProject} = project;
+	console.log('🚀🚀: SingleProject -> fullPhoto', fullPhoto);
+
 	return (
 		<motion.div
 			layout
@@ -12,7 +14,7 @@ const SingleProject = ({project}) => {
 			transition={{duration: 0.3}}
 			className="col-sm-12 col-md-6 col-xl-4 portfolio__items W-0	"
 		>
-			<div className="item" style={{backgroundImage: `url(${image})`}}>
+			<div className="item" style={{backgroundImage: `url(${fullPhoto})`}}>
 				<div className="item--text">
 					<div className="text-inner">
 						<p>
@@ -20,7 +22,7 @@ const SingleProject = ({project}) => {
 								{name} <small>Details</small>
 							</Link>
 							<a
-								href={live_link}
+								href={liveLink}
 								className="title"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -32,7 +34,7 @@ const SingleProject = ({project}) => {
 						</p>
 					</div>
 				</div>
-				{status && (
+				{currentProject && (
 					<div className="ongoing">
 						<p>Ongoing</p>
 					</div>

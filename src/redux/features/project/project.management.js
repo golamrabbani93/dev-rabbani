@@ -25,7 +25,21 @@ const projectManagementApi = baseApi.injectEndpoints({
 				};
 			},
 		}),
-
+		getSingleProject: builder.query({
+			query: (id) => {
+				return {
+					url: `/projects/${id}`,
+					method: 'GET',
+				};
+			},
+			providesTags: ['Projects'],
+			transformResponse: (response) => {
+				const data = response?.data;
+				return {
+					data,
+				};
+			},
+		}),
 		addProject: builder.mutation({
 			query: (projectData) => ({
 				url: '/projects/create-project',
@@ -37,4 +51,5 @@ const projectManagementApi = baseApi.injectEndpoints({
 	}),
 });
 
-export const {useGetAllProjectQuery, useAddProjectMutation} = projectManagementApi;
+export const {useGetAllProjectQuery, useGetSingleProjectQuery, useAddProjectMutation} =
+	projectManagementApi;

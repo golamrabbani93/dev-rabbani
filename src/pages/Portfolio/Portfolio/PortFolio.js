@@ -6,6 +6,7 @@ import SingleProject from '../../Homes/Projects/SingleProject';
 import {useState} from 'react';
 import {motion} from 'framer-motion';
 import UseTitle from '../../../hooks/UseTitle';
+import {useGetAllProjectQuery} from '../../../redux/features/project/project.management';
 const PortFolio = () => {
 	UseTitle('Portfolio || Webrabbani');
 	useEffect(() => {
@@ -14,18 +15,28 @@ const PortFolio = () => {
 	const btnTexts = ['all', 'dynamic', 'static', 'games'];
 	const [active, setActive] = useState('all');
 	const [projects, setProjects] = useState([]);
+	console.log('🚀🚀: PortFolio -> projects', projects);
 	const [filterProjects, SetFilterProjects] = useState([]);
+	console.log('🚀🚀: PortFolio -> filterProjects', filterProjects);
 	// !Load projects from Database
-	const {} = useQuery({
-		queryKey: [],
-		queryFn: async () => {
-			const res = await fetch('https://webrabbani-server.vercel.app/projects');
-			const data = await res.json();
-			setProjects(data);
-			SetFilterProjects(data);
-			return data;
-		},
-	});
+	// const {} = useQuery({
+	// 	queryKey: [],
+	// 	queryFn: async () => {
+	// 		const res = await fetch('https://webrabbani-server.vercel.app/projects');
+	// 		const data = await res.json();
+	// 		setProjects(data);
+	// 		SetFilterProjects(data);
+	// 		return data;
+	// 	},
+	// });
+	const {data: AllProjects, isLoading} = useGetAllProjectQuery('');
+	// Update projects and filtered projects when data is loaded
+	useEffect(() => {
+		if (!isLoading && AllProjects?.data?.length > 0) {
+			setProjects(AllProjects.data);
+			SetFilterProjects(AllProjects.data);
+		}
+	}, [isLoading, AllProjects]);
 
 	// !Handle Filter
 	const handelFilter = (e, index) => {

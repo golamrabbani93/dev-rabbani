@@ -25,6 +25,7 @@
 		}
 	}
 	.project-link {
+		text-align: center;
 		div > span {
 			color: #fff;
 			font-size: 3rem;
@@ -42,6 +43,29 @@
 			&:hover {
 				color: $color-primary;
 			}
+		}
+		div > span > span {
+			color: #fff;
+			font-size: 3rem;
+			margin-left: 1rem;
+			font-family: $font-bebas;
+			transition: all 0.3s;
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+		@include tablet-port {
+			/*1025px-1200px*/
+			display: flex;
+		}
+		@include mini-desktop {
+			/*1201px-1300px*/
+			display: flex;
+		}
+		@include desktop {
+			/*1301px*/
+			display: flex;
 		}
 	}
 	.project_details {
