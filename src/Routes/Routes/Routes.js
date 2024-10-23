@@ -15,6 +15,8 @@ import AddProject from '../../pages/Dashboard/Projects/AddProject/AddProject';
 import AddBlog from '../../pages/Dashboard/Blog/AddBlog/AddBlog';
 import AllBlog from '../../pages/Dashboard/Blog/AllBlog/AllBlog';
 import UpdateBlog from '../../pages/Dashboard/Blog/UpdateBlog/UpdateBlog';
+import Blogs from '../../pages/Blogs/Blogs';
+import SingleBlog from '../../pages/Blogs/SingleBlog';
 
 export const router = createBrowserRouter([
 	{
@@ -32,6 +34,14 @@ export const router = createBrowserRouter([
 			{
 				path: '/about',
 				element: <About></About>,
+			},
+			{
+				path: '/blogs',
+				element: <Blogs></Blogs>,
+			},
+			{
+				path: '/blogs/:id',
+				element: <SingleBlog></SingleBlog>,
 			},
 			{
 				path: '/services',

@@ -154,7 +154,7 @@ const AddProject = () => {
 						<Col span={12}>
 							<div style={style}>
 								<label className="mb-2">Upload Project Images For Details</label>
-								<DevrabbaniUpload setFileList={setImages} count={3} fileList={images} />
+								<DevrabbaniUpload setFileList={setImages} count={6} fileList={images} />
 							</div>
 						</Col>
 					</Row>

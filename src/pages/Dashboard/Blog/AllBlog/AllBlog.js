@@ -9,8 +9,8 @@ import {useState} from 'react';
 import {toast} from 'sonner';
 
 const AllBlog = () => {
-	const {data: blogs, isLoading, isError} = useGetAllBlogQuery('');
-	const blogData = blogs?.data;
+	const {data, isLoading, isError} = useGetAllBlogQuery('');
+	const blogData = data?.data ? [...data.data].reverse() : [];
 
 	const newDataSource = blogData?.map((item) => {
 		return {
@@ -116,7 +116,7 @@ const DeleteBlog = ({blogData}) => {
 				]}
 			>
 				<h2 className="text-3xl font-semibold mb-2 text-red-600">{`Delete ${blogData?.title}`}</h2>
-				<p className="text-xl mt-2">Are You Sure To delete This Bike</p>
+				<p className="text-xl mt-2">Are You Sure To delete This Blog</p>
 			</Modal>
 		</div>
 	);

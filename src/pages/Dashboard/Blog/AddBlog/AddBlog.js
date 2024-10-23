@@ -73,6 +73,7 @@ const AddBlog = () => {
 								[{header: [1, 2, false]}],
 								['bold', 'italic', 'underline'],
 								['image', 'code-block'],
+								[{list: 'ordered'}, {list: 'bullet'}],
 							],
 						}}
 					/>

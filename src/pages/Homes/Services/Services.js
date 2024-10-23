@@ -49,7 +49,7 @@ const Services = ({btn}) => {
 						<SingleServices key={service._id} service={service}></SingleServices>
 					))}
 				</motion.div>
-				<motion.div
+				{/* <motion.div
 					initial={{x: 200, opacity: 0}}
 					whileInView={{x: 0, opacity: 1}}
 					transition={{duration: 0.6}}
@@ -58,7 +58,7 @@ const Services = ({btn}) => {
 					<Link to={`services`} className="custom_button m-auto">
 						View All Services
 					</Link>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

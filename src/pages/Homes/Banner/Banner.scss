@@ -85,35 +85,25 @@
 			left: 36%;
 			@include mobile-m {
 				/*320px-375px*/
-				width: 60rem;
-				height: 60rem;
-				top: 1rem;
-				left: 5%;
+				width: 40rem;
+				height: 40rem;
+				top: 8rem;
+				left: 20%;
 			}
 			@include mobile-s {
 				/*376px-480px*/
-				width: 65rem;
-				height: 65rem;
-				top: 1rem;
-				left: 10%;
+				display: none;
 			}
 			@include mobile-l {
 				/*426px-480px*/
-				left: 10%;
-				width: 70rem;
-				height: 70rem;
-				top: 0rem;
+				display: none;
 			}
 			@include tablet {
 				/*768px-1024px*/
-				width: 50rem;
-				height: 50rem;
-				top: -4rem;
-				left: 24%;
+				display: none;
 			}
 			@include mini-desktop {
-				top: -10rem;
-				left: 34%;
+				display: none;
 			}
 			@include desktop {
 				/*(min-width: 1401px)*/

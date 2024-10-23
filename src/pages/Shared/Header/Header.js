@@ -47,15 +47,16 @@ const Header = () => {
 									</NavLink>
 								</li>
 								<li>
-									<NavLink to="/services" onClick={() => setHamOpen(!hamOpen)}>
-										Services
-									</NavLink>
-								</li>
-								<li>
 									<NavLink to="/portfolio" onClick={() => setHamOpen(!hamOpen)}>
 										PortFolio
 									</NavLink>
 								</li>
+								<li>
+									<NavLink to="/blogs" onClick={() => setHamOpen(!hamOpen)}>
+										Blogs
+									</NavLink>
+								</li>
+
 								<li>
 									<NavLink to="/contact" onClick={() => setHamOpen(!hamOpen)}>
 										Contact

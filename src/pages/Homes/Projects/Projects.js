@@ -1,4 +1,3 @@
-import {useQuery} from '@tanstack/react-query';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Projects.scss';
@@ -7,14 +6,6 @@ import Loader from '../../Shared/Loader/Loader';
 import {motion} from 'framer-motion';
 import {useGetAllProjectQuery} from '../../../redux/features/project/project.management';
 const Projects = ({btn}) => {
-	// const {data: projects = [], isLoading} = useQuery({
-	// 	queryKey: [],
-	// 	queryFn: async () => {
-	// 		const res = await fetch('https://webrabbani-server.vercel.app/projects?count=fast3');
-	// 		const data = await res.json();
-	// 		return data;
-	// 	},
-	// });
 	const {data, isLoading} = useGetAllProjectQuery('');
 	const projects = data?.data || [];
 	if (isLoading) {

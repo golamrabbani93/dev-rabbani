@@ -38,7 +38,7 @@ const SingleProject = () => {
 
 	return (
 		<div className="">
-			<div className="extra-margin position-absolute"></div>
+			<div className="extra-margin position-absolute top-0"></div>
 			<div className="project  ">
 				<div className="container ">
 					<h2 className="heading-primary--main text-white font-bebas mb-5">{name}</h2>
