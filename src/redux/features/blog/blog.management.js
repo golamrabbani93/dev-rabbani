@@ -48,7 +48,28 @@ const blogManagementApi = baseApi.injectEndpoints({
 			}),
 			invalidatesTags: ['Blogs'],
 		}),
+		updateBlog: builder.mutation({
+			query: (blogData) => ({
+				url: `/blogs/${blogData.id}`,
+				method: 'PUT',
+				body: blogData.data,
+			}),
+			invalidatesTags: ['Blogs'],
+		}),
+		deleteBlog: builder.mutation({
+			query: (id) => ({
+				url: `/blogs/${id}`,
+				method: 'DELETE',
+			}),
+			invalidatesTags: ['Blogs'],
+		}),
 	}),
 });
 
-export const {useGetAllBlogQuery, useGetSingleBlogQuery, useAddBlogMutation} = blogManagementApi;
+export const {
+	useGetAllBlogQuery,
+	useGetSingleBlogQuery,
+	useAddBlogMutation,
+	useUpdateBlogMutation,
+	useDeleteBlogMutation,
+} = blogManagementApi;

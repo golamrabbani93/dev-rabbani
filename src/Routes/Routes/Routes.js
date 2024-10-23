@@ -14,6 +14,7 @@ import AllProjects from '../../pages/Dashboard/Projects/AllProjetcs/AllProjects'
 import AddProject from '../../pages/Dashboard/Projects/AddProject/AddProject';
 import AddBlog from '../../pages/Dashboard/Blog/AddBlog/AddBlog';
 import AllBlog from '../../pages/Dashboard/Blog/AllBlog/AllBlog';
+import UpdateBlog from '../../pages/Dashboard/Blog/UpdateBlog/UpdateBlog';
 
 export const router = createBrowserRouter([
 	{
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/dashboard/all-blog',
 				element: <AllBlog />,
+			},
+			{
+				path: '/dashboard/update-blog/:id',
+				element: <UpdateBlog />,
 			},
 		],
 	},

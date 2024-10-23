@@ -15,7 +15,6 @@ const AllProjects = () => {
 		};
 	});
 
-	console.log('🚀🚀: AllProjects -> newDataSource', newDataSource);
 	// const dataSource = [
 	// 	{
 	// 		key: '1',
