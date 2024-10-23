@@ -18,6 +18,39 @@ const Sidebar = () => {
 			),
 		},
 		{
+			key: 'BlogManagement',
+			label: 'Blog Management',
+
+			children: [
+				{
+					key: 'AllBlog',
+					label: (
+						<NavLink
+							style={{
+								textDecoration: 'none',
+							}}
+							to="/dashboard/all-blog"
+						>
+							All Blogs
+						</NavLink>
+					),
+				},
+				{
+					key: 'AddBlog',
+					label: (
+						<NavLink
+							style={{
+								textDecoration: 'none',
+							}}
+							to="/dashboard/add-blog"
+						>
+							Add Blog
+						</NavLink>
+					),
+				},
+			],
+		},
+		{
 			key: 'ProjectsManagement',
 			label: 'Projects Management',
 

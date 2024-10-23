@@ -12,6 +12,8 @@ import DashboardLayout from '../../Layouts/DashboardLayout/DashboardLayout';
 import Dashboard from '../../pages/Dashboard/Dashboard/Dashboard';
 import AllProjects from '../../pages/Dashboard/Projects/AllProjetcs/AllProjects';
 import AddProject from '../../pages/Dashboard/Projects/AddProject/AddProject';
+import AddBlog from '../../pages/Dashboard/Blog/AddBlog/AddBlog';
+import AllBlog from '../../pages/Dashboard/Blog/AllBlog/AllBlog';
 
 export const router = createBrowserRouter([
 	{
@@ -63,6 +65,14 @@ export const router = createBrowserRouter([
 			{
 				path: '/dashboard/add-project',
 				element: <AddProject />,
+			},
+			{
+				path: '/dashboard/add-blog',
+				element: <AddBlog />,
+			},
+			{
+				path: '/dashboard/all-blog',
+				element: <AllBlog />,
 			},
 		],
 	},

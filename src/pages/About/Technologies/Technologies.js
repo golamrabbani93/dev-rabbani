@@ -42,6 +42,7 @@ const Technologies = () => {
 					</div>
 				</div>
 			</div>
+			<div />
 		</div>
 	);
 };
