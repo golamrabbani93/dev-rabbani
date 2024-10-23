@@ -1,18 +1,19 @@
 import {useState, useRef} from 'react';
 import ReactQuill, {Quill} from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import {useDropzone} from 'react-dropzone';
 import DevrabbaniForm from '../../../../components/Form/DevrabbaniForm';
 import DevrabbaniInput from '../../../../components/Form/DevrabbaniInput';
 import DevrabbaniUpload from '../../../../components/Form/DevrabbaniUpload';
-import {Button} from 'antd';
+import {Button, Spin} from 'antd';
 import {toast} from 'sonner';
+import {useAddBlogMutation} from '../../../../redux/features/blog/blog.management';
 
 const AddBlog = () => {
+	const [addBlog, {isLoading}] = useAddBlogMutation();
 	const [value, setValue] = useState('');
 	const [files, setFiles] = useState([]);
 	const quillRef = useRef(null);
-	const handleSubmitData = (data) => {
+	const handleSubmitData = async (data) => {
 		if (data.title === undefined) {
 			toast.error('Please Enter Blog Title');
 			return; // Stops further execution
@@ -30,8 +31,17 @@ const AddBlog = () => {
 			content: value,
 		};
 		const formData = new FormData();
-		formData.append('data', newData);
+		formData.append('data', JSON.stringify(newData));
 		formData.append('images', files[0]?.originFileObj);
+
+		const dt = await addBlog(formData);
+		if (dt?.error) {
+			toast.error(dt.error.data.errorSources[0].message);
+		} else {
+			toast.success('Blog Added Successfully');
+			setFiles([]);
+			quillRef.current.editor.setText('');
+		}
 	};
 	return (
 		<>
@@ -45,7 +55,7 @@ const AddBlog = () => {
 				}}
 			>
 				<DevrabbaniForm onSubmit={handleSubmitData}>
-					<DevrabbaniInput name="title" type="text" label="Enter Blog Title" />
+					<DevrabbaniInput name="title" label="Enter Blog Title" />
 					<label className="mb-1">Upload Blog Cover Photo</label>
 					<DevrabbaniUpload name="image" setFileList={setFiles} fileList={files} count={1} />
 					<label className="mb-1">Blog Content</label>
@@ -68,8 +78,7 @@ const AddBlog = () => {
 					/>
 
 					<Button htmlType="submit" className="mt-5">
-						{/* {isLoading ? <Spin size="small" /> : 'Submit'} */}
-						Submit
+						{isLoading ? <Spin size="small" /> : 'Submit'}
 					</Button>
 				</DevrabbaniForm>
 			</div>

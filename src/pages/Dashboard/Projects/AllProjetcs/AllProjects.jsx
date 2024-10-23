@@ -79,7 +79,14 @@ const AllProjects = () => {
 		},
 	];
 
-	return <Table loading={isLoading} dataSource={newDataSource} columns={columns} />;
+	return (
+		<>
+			<h2 class className="title-header">
+				All Projects
+			</h2>
+			<Table loading={isLoading} dataSource={newDataSource} columns={columns} />
+		</>
+	);
 };
 
 export default AllProjects;
