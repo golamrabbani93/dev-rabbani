@@ -8,12 +8,12 @@ const Contact = () => {
 		e.preventDefault();
 		emailjs.sendForm('service_xzmbkme', 'template_zj99x7k', form.current, 'GVmCzyM6KoMMFeQj2').then(
 			(result) => {
-				console.log(result.text);
 				toast.success('Message Sent');
 				e.target.reset();
 			},
 			(error) => {
-				console.log(error.text);
+				// console.log(error.text);
+				e.target.reset();
 			},
 		);
 	};

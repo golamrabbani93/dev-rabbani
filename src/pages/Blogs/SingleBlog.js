@@ -12,7 +12,6 @@ const SingleBlog = () => {
 	const params = useParams();
 	const blogId = params.id;
 	const {data, isLoading} = useGetSingleBlogQuery(blogId);
-	console.log('🚀🚀: SingleBlog -> data', data);
 	const blog = data?.data || {};
 	if (isLoading) {
 		return <Loader></Loader>;
@@ -29,7 +28,7 @@ const SingleBlog = () => {
 				<div className="container mt-5">
 					{/* Back to Blogs Button */}
 					<div className="mb-4">
-						<Link href="/blogs">
+						<Link to="/blogs">
 							<Button size="sm" danger type="primary">
 								Back to Blogs
 							</Button>
@@ -37,7 +36,7 @@ const SingleBlog = () => {
 					</div>
 
 					{/* Blog Title */}
-					<h1 className="mb-4 text-center">{blog.title}</h1>
+					<h1 className="mb-4 text-center text-white">{blog.title}</h1>
 
 					{/* Blog Image */}
 					<div className="text-center mb-5">
@@ -56,7 +55,7 @@ const SingleBlog = () => {
 
 					{/* Back to Blogs Button at the bottom */}
 					<div className="mt-4 text-center">
-						<Link href="/blogs">
+						<Link to="/blogs">
 							<Button size="sm" danger type="primary">
 								Back to Blogs
 							</Button>

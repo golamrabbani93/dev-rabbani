@@ -14,7 +14,6 @@ const Contact = () => {
 	UseTitle('Contact || Webrabbani');
 	const {register, handleSubmit, reset} = useForm();
 	const submitData = (data) => {
-		console.log(data);
 		try {
 			fetch('https://webrabbani-server.vercel.app/addMessage', {
 				method: 'POST',

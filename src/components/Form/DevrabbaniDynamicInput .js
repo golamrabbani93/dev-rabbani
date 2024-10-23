@@ -11,7 +11,6 @@ const DynamicDevrabbaniInput = () => {
 	});
 
 	const onSubmit = (e) => {
-		console.log('🚀🚀: onSubmit -> e', e);
 		e.preventDefault();
 	};
 

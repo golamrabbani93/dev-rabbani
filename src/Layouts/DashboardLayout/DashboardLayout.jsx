@@ -4,9 +4,15 @@ import Sidebar from './SideBar';
 import {FaHome, FaSignOutAlt} from 'react-icons/fa';
 import {Link, Outlet} from 'react-router-dom';
 import './DashboardLayout.css';
+import {useAppDispatch} from '../../redux/hooks';
+import {logOut} from '../../redux/features/auth/authSlice';
 const {Header, Content, Footer} = Layout;
 
 const DashboardLayout = () => {
+	const dispatch = useAppDispatch();
+	const handleLogout = () => {
+		dispatch(logOut());
+	};
 	const darkTheme = {
 		algorithm: theme.darkAlgorithm,
 	};
@@ -34,7 +40,7 @@ const DashboardLayout = () => {
 
 								{/* Logout */}
 								<li
-									// onClick={handleLogout}
+									onClick={handleLogout}
 									className="text-white flex items-center space-x-2 cursor-pointer hover:text-primary transition font-bold list-none me-4 "
 								>
 									<span className="list-link">

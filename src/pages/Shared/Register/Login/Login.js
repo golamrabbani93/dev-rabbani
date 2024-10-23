@@ -13,10 +13,7 @@ import {useNavigate} from 'react-router-dom';
 const Login = () => {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
-	const defaultValues = {
-		email: 'devrabbani9@gmail.com',
-		password: '@Rab bani@5456',
-	};
+
 	const [login] = useLoginMutation();
 	const handleLogin = async (data) => {
 		const toastId = toast.loading('Logging in...');
@@ -54,11 +51,7 @@ const Login = () => {
 					>
 						Admin Login
 					</h2>
-					<DevrabbaniForm
-						onSubmit={handleLogin}
-						resolver={zodResolver(loginSchema)}
-						defaultValues={defaultValues}
-					>
+					<DevrabbaniForm onSubmit={handleLogin} resolver={zodResolver(loginSchema)}>
 						{/* Email */}
 						<div className="mb-3 ">
 							<DevrabbaniInput

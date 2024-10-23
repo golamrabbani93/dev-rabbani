@@ -41,7 +41,7 @@ const Blogs = () => {
 
 							{/* Middle Title */}
 							<div className="col-12 col-md-6 text-center mb-3 mb-md-0">
-								<h5 className="mb-0" style={{fontSize: '20px'}}>
+								<h5 className="mb-0 text-white" style={{fontSize: '20px'}}>
 									{blog.title}
 								</h5>
 							</div>

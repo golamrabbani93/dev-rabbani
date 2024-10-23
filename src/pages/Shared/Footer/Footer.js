@@ -77,7 +77,7 @@ const Footer = () => {
 									<li>
 										<Link>
 											<FaLink />
-											https://webrabbani.web.app/
+											https://dev-rabbani.web.app/
 										</Link>
 									</li>
 								</ul>

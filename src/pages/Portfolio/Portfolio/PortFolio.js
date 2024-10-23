@@ -15,9 +15,7 @@ const PortFolio = () => {
 	const btnTexts = ['all', 'dynamic', 'static', 'games'];
 	const [active, setActive] = useState('all');
 	const [projects, setProjects] = useState([]);
-	console.log('🚀🚀: PortFolio -> projects', projects);
 	const [filterProjects, SetFilterProjects] = useState([]);
-	console.log('🚀🚀: PortFolio -> filterProjects', filterProjects);
 	// !Load projects from Database
 	// const {} = useQuery({
 	// 	queryKey: [],
